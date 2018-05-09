@@ -1,0 +1,40 @@
+body{
+    font-family: 'Rancho', cursive;
+    font-size: 1.5em;
+}
+.menu{
+    background: #000000;
+    color: #ffffff;
+}
+
+.a-menu{
+    color: #ffffff !important;
+}
+
+.logo{
+    width: 100px;
+    height: 10%;
+}
+
+h1, h2, h3,h4{
+    font-size: 3em;
+}
+
+.c-caja{
+    margin: 0 auto;
+}
+.caja{
+    margin-top: 10px;
+}
+
+.caja:hover{
+    transform: scale(1.25);
+    transition: 1s;
+    z-index: 100;
+}
+
+.links:hover{
+    background-color: #EB7947;
+    transition: 1s;
+    border-radius: 10px;
+}
