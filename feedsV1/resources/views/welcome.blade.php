@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Feeds
+                    Feeds v1
                 </div>
                 <div class="row">
                     <p>by Codevolt</p>
