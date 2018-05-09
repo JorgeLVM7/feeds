@@ -79,7 +79,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Feeds
+                </div>
+                <div class="row">
+                    <p>by Codevolt</p>
                 </div>
 
                 <div class="links">
