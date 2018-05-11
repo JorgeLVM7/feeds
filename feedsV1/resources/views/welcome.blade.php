@@ -26,7 +26,7 @@
                 <a class="a-menu nav-link" href="#">Principal<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="a-menu nav-link links" href="{{ url('layouts/index') }}">Mapa</a>
+                <a class="a-menu nav-link links" href="">Mapa</a>
             </li>
             <li class="nav-item">
                 <a class="a-menu nav-link links" href="#">Ingresar</a>
