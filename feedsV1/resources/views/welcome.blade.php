@@ -29,7 +29,7 @@
                 <a class="a-menu nav-link links" href="">Mapa</a>
             </li>
             <li class="nav-item">
-                <a class="a-menu nav-link links" href="#">Ingresar</a>
+                <a class="a-menu nav-link links" href="{{ route('login') }}">Ingresar</a>
             </li>
         </ul>
         <!--<form class="form-inline my-2 my-lg-0">-->
