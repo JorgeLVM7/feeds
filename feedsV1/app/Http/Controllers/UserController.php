@@ -42,7 +42,7 @@ class UserController extends Controller
     {
         $users = User::where('code',$code);
         $exist = $users -> count();
-        $exist = $users-> first();
+        $user = $users-> first();
         if($exist == 1 and $user->active == 0)
         {
             $id = $user->id;

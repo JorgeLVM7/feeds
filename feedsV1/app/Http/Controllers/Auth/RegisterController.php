@@ -82,7 +82,7 @@ class RegisterController extends Controller
     }
     function Email($dates,$email){
         Mail::send('emails.plantilla',$dates, function($message) use ($email){
-            $message->subject('Bienvenido a la plataforma');
+            $message->subject('Bienvenido a Feeds');
             $message->to($email);
             $message->from('feeds_campeche@hotmail.com', 'Feeds');
         });
