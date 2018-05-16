@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/respuesta', function () {
+    return view('response');
+});
+Route::get('activacion/{code}', 'UserController@activate');
+Route::post('complete/{id}', 'UserController@complete');
