@@ -11,11 +11,15 @@
     <title>Feeds</title>
 
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css')}}" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="88x88" href="{{ asset('img/apple-icon.png')}}"/>
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png')}}"/>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top fondo">
             <div class="container">
                 <div class="navbar-header">
 
@@ -29,7 +33,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        Feeds
+                        <img class="logo" src="img/favicon.png" alt="">
                     </a>
                 </div>
 
@@ -43,20 +47,20 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Inicio de sesión</a></li>
-                            <li><a href="{{ route('register') }}">Registro</a></li>
+                            <li class="links"><a class="a-menu nav-link" href="{{ route('login') }}">Inicio de sesión</a></li>
+                            <li class="links"><a class="a-menu nav-link" href="{{ route('register') }}">Registro</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a class="a-menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
+                                    <li class="black">
+                                        <a class="a-menu" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Salir
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

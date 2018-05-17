@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Bienvenido</div>
+            <div class="panel panel-default bg-t">
+                <div class="panel-heading title">Bienvenido</div>
 
                 <div class="panel-body">
-                  Se le a enviado un correo electrónico
+                  <p class="tx"> !Gracias¡ se le envió un correo para completar el registro</p>
                 </div>
             </div>
         </div>
