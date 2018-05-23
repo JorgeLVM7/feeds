@@ -53,7 +53,7 @@
     <div class="row">
         <div class="col-12">
             <h2>Promociones</h2>
-        </div>
+        </div>   
         <div class="col-sm-4 caja">
             <div class="card c-caja" style="width: 18rem;">
                 <img class="card-img-top" src="img/promo1.jpg" alt="Card image cap">
