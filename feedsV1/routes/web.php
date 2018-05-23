@@ -24,3 +24,5 @@ Route::get('/respuesta', function () {
 });
 Route::get('activacion/{code}', 'UserController@activate');
 Route::post('complete/{id}', 'UserController@complete');
+
+Route::resource('products', 'ProductsController');
