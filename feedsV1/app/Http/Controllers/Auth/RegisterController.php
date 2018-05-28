@@ -72,13 +72,17 @@ class RegisterController extends Controller
     {
       $code = $this->generarCodigo(8);
       $email = $data['email'];
+      $rol = $this-> roles_id_rol ='1';
       $dates = array('name' => $data['name'], 'code' => $code);
       $this->Email($dates,$email);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'code' => $code,
+            'roles_id_rol'=> $rol,
         ]);
+
+
     }
     function Email($dates,$email){
         Mail::send('emails.plantilla',$dates, function($message) use ($email){
