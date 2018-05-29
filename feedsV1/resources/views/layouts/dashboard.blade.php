@@ -95,6 +95,8 @@
             <div class="page-header">
                 <h2>Bienvenido a Feeds {{ Auth::user()->name }}</h2>
             </div>
+
+            @yield('content')
             {{--<p class="lead">A responsive, multi-level vertical accordion.</p>--}}
             {{--<hr>--}}
             {{--<div class="row">--}}
