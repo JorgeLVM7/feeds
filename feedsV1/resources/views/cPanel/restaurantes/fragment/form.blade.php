@@ -13,7 +13,7 @@
 <div class="form-group">
     {!! Form::label('categoria','Categoría ') !!}
     {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
-                                'Mo'=>'Food Truck',
+                                'Food Truck'=>'Food Truck',
                                 'Comida economica' => 'Comida economica',
                                 'Bar & Snack'=>'Bar & Snack']
                                 'Mariscos'=>'Mariscos']
