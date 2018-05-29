@@ -26,3 +26,5 @@ Route::get('activacion/{code}', 'UserController@activate');
 Route::post('complete/{id}', 'UserController@complete');
 
 Route::resource('products', 'ProductsController');
+
+Route::resource('restaurantes','RestauranteController');
