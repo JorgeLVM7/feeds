@@ -15,7 +15,7 @@
     {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
                                 'Food Truck'=>'Food Truck',
                                 'Comida economica' => 'Comida economica',
-                                'Bar & Snack'=>'Bar & Snack']
+                                'Bar & Snack'=>'Bar & Snack',
                                 'Mariscos'=>'Mariscos']
                                 , null,['class'=>'form-control']
 ) !!}
@@ -51,16 +51,16 @@
 </div>
 <div class="form-group">
     {!! Form::label('telofono','Teléfono: ') !!}
-    {!! Form::text('calle', null,['class'=>'form-control']) !!}
+    {!! Form::text('telefono', null,['class'=>'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('RFC','RFC: ') !!}
     {!! Form::text('RFC', null,['class'=>'form-control']) !!}
 </div>
-<div class="form-group">
-    {!! Form::label('foto','Foto') !!}
-    {!! Form::file('path') !!}
-</div>
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('foto','Foto') !!}--}}
+    {{--{!! Form::file('path') !!}--}}
+{{--</div>--}}
 
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}

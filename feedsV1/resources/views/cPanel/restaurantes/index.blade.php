@@ -9,10 +9,10 @@
                     <h1>Restaurantes</h1>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-outline-dark float-right" href="">Nuevo</a>
+                    <a class="btn btn-outline-dark float-right" href="{{route('restaurantes.create')}}">Nuevo</a>
                 </div>
             </div>
-{{--            @include('restaurantes.fragment.info')--}}
+            @include('cPanel.restaurantes.fragment.info')
             <table class="table table-hover ">
                 <thead>
                 <tr>
@@ -27,11 +27,14 @@
                 </thead>
                 <tbody>
                 @foreach($restaurantes as $restaurante)
-                    <tr class="{{$restaurante ->approve}}">
-                        <td>{{ $restaurante ->head }}</td>
-                        <td>{{ $restaurante ->description }}</td>
-                        <td>{{ $restaurante ->category }}</td>
-                        <td>{{ $restaurante ->approve }}</td>
+                    <tr >
+                        <td>{{ $restaurante ->nombre }}</td>
+
+                        <td>{{ $restaurante ->descripcion }}</td>
+                        <td>{{ $restaurante ->sitio_web }}</td>
+                        <td>{{ $restaurante ->email}}</td>
+                        <td>{{ $restaurante ->telefono }}</td>
+                        <td>{{ $restaurante ->calle }}</td>
                         <td>
                             <div class="btn-group btn-group-toggle" >
                                 <a href="{{ route('restaurantes.show', $restaurante->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
