@@ -31,6 +31,8 @@ class CreateRestaurantesTable extends Migration
             $table->string('horario');
             $table->string('latitud');
             $table->string('longitud');
+            $table->string('RFC');
+            $table->string('foto')->nullable();
             $table->timestamps();
             $table->integer('users_id_user')->unsigned();
             $table->foreign('user_id_user')->references('id')->on('users');

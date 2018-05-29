@@ -30,6 +30,8 @@ class RestauranteController extends Controller
         $restaurante->referencia = $request->referencia;
         $restaurante->telefono = $request->telefono;
         $restaurante->horario = $request->horario;
+        $restaurante->RFC = $request->RFC;
+        $restaurante->foto = $request->foto;
         $restaurante->save();
         return redirect()-> route('restaurante.index')
         ->with('info','El restaurante fue guardado correctamente');
