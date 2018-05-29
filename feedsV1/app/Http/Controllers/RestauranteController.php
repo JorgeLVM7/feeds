@@ -8,13 +8,14 @@ class RestauranteController extends Controller
 {
     public function index()
     {
-        # code...
+        $restaurantes = Restaurantes::orderBy('id','DESC');
+        return view('cPanel.restaurantes.index',compact('restaurantes'));
     }
     public function show()
     {
         # code...
     }
-    public function store()
+    public function store(Restaurantes $request, $id)
     {
         $restaurante = new Restaurante;
         $restaurante->nombre = $request->nombre;
