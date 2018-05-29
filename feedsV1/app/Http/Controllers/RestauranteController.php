@@ -29,7 +29,6 @@ class RestauranteController extends Controller
         $restaurante->codigo_postal = $request->codigo_postal;
         $restaurante->referencia = $request->referencia;
         $restaurante->telefono = $request->telefono;
-        $restaurante->horario = $request->horario;
         $restaurante->RFC = $request->RFC;
         $restaurante->foto = $request->foto;
         $restaurante->save();
