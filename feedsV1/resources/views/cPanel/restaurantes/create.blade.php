@@ -19,12 +19,15 @@
                     @include('cPanel.restaurantes.fragment.error')
 
                     <div class="row">
-                        <div class="col-12">
-                            {!! Form::open(['route'=>'restaurantes.store', 'files'=>true]) !!}
+                        <div class="col-md-12">
+                            {{--<div class="row">--}}
+                                {!! Form::open(['route'=>'restaurantes.store', 'files'=>true]) !!}
 
-                            @include('cPanel.restaurantes.fragment.form')
+                                @include('cPanel.restaurantes.fragment.form')
 
-                            {!! Form::close() !!}
+                                {!! Form::close() !!}
+                            {{--</div>--}}
+
                         </div>
                     </div>
                 </div>
