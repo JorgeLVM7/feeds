@@ -1,10 +1,15 @@
-<div class="form-group">
-    {!! Form::label('nombre','Nombre de restaurante: ') !!}
-    {!! Form::text('nombre', null,['class'=>'form-control','maxlength'=>'65']) !!}
+<div class="col-md-6">
+    <div class="form-group">
+        {!! Form::label('nombre','Nombre de restaurante: ') !!}
+        {!! Form::text('nombre', null,['class'=>'form-control','maxlength'=>'65']) !!}
+    </div>
 </div>
-<div class="form-group">
-    {!! Form::label('descripcion','Descripción: ') !!}
-    {!! Form::text('descripcion', null,['class'=>'form-control']) !!}
+
+<div class="col-md-6">
+    <div class="form-group">
+        {!! Form::label('descripcion','Descripción: ') !!}
+        {!! Form::text('descripcion', null,['class'=>'form-control']) !!}
+    </div>
 </div>
 <div class="form-group">
     {!! Form::label('sitio_web','Sitio web: ') !!}
@@ -52,6 +57,11 @@
 <div class="form-group">
     {!! Form::label('telofono','Teléfono: ') !!}
     {!! Form::text('telefono', null,['class'=>'form-control']) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('horario','Día: ') !!}
+    
+            
 </div>
 <div class="form-group">
     {!! Form::label('RFC','RFC: ') !!}

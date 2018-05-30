@@ -99,7 +99,7 @@
             </div>
 
             @yield('content')
-            {{--<p class="lead">A responsive, multi-level vertical accordion.</p>--}}
+            <!--{--<p class="lead">A responsive, multi-level vertical accordion.</p>--}}
             {{--<hr>--}}
             {{--<div class="row">--}}
                 {{--<div class="col-md-6">--}}
@@ -130,7 +130,7 @@
 
                     {{--</div>--}}
                 {{--</div>--}}
-            {{--</div>--}}
+            {{--</div>--}}-->
         </main>
     </div>
 </div>

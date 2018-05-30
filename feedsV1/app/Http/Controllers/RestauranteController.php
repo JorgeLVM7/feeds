@@ -35,13 +35,11 @@ class RestauranteController extends Controller
         $restaurante->referencia = $request->referencia;
         $restaurante->telefono = $request->telefono;
         $restaurante->RFC = $request->RFC;
-        $restaurante->horario = 'AM';
+        $restaurante->horario = $request->horario;
         $restaurante->longitud = 'AM';
         $restaurante->latitud = 'AM';
         $restaurante->foto = 'AM';
         $restaurante->users_id_user = '1';
-//        $restaurante->horario = 'AM';
-//        $restaurante->horario = 'AM';
 //        $restaurante->foto = $request->foto;
         $restaurante->save();
         return redirect()-> route('restaurantes.index')
