@@ -94,16 +94,6 @@
     </div>
 </div>
 
-
-
-
-
-<div class="form-group">
-    {!! Form::label('horario','Día: ') !!}
-    
-            
-</div>
-
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
@@ -117,7 +107,15 @@
     <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('horario','Horario') !!}
-            {!! Form::text('horario', null,['class'=>'form-control']) !!}
+            <select name="horario" id="horario" multiple="multiple">
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
         </div>
     </div>
     {{--<div class="col-md-6">--}}
