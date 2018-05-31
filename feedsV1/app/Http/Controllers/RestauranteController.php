@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RestaurantesRequest;
 
 
+
 class RestauranteController extends Controller
 {
     public function index()
@@ -15,9 +16,10 @@ class RestauranteController extends Controller
 
         return view('cPanel.restaurantes.index',compact('restaurantes'));
     }
-    public function show()
+    public function show($id)
     {
-        # code...
+        $restaurante = Restaurantes::find($id);
+        return view('cPanel.restaurantes.show', compact('restaurante'));
     }
     public function store(RestaurantesRequest $request)
     {
@@ -38,7 +40,7 @@ class RestauranteController extends Controller
         $restaurante->horario = $request->horario;
         $restaurante->longitud = 'AM';
         $restaurante->latitud = 'AM';
-        $restaurante->foto = 'AM';
+        $restaurante->path = $request->path;
         $restaurante->users_id_user = '1';
 //        $restaurante->foto = $request->foto;
         $restaurante->save();

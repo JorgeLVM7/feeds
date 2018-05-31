@@ -50,7 +50,8 @@
             {!! Form::text('calle', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div><div class="row">
+</div>
+<div class="row">
     <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('no_int','Número interior: ') !!}
@@ -63,7 +64,8 @@
             {!! Form::text('no_ext', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div><div class="row">
+</div>
+<div class="row">
     <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('colonia','Colonia: ') !!}
@@ -76,7 +78,8 @@
             {!! Form::text('codigo_postal', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div><div class="row">
+</div>
+<div class="row">
     <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('referencia','Referencia: ') !!}
@@ -90,9 +93,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 
 
@@ -113,10 +113,29 @@
     </div>
 </div>
 
-{{--<div class="form-group">--}}
-    {{--{!! Form::label('foto','Foto') !!}--}}
-    {{--{!! Form::file('path') !!}--}}
-{{--</div>--}}
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('horario','Horario') !!}
+            {!! Form::text('horario', null,['class'=>'form-control']) !!}
+        </div>
+    </div>
+    {{--<div class="col-md-6">--}}
+        {{--<div class="form-group">--}}
+            {{--{!! Form::label('calle','Calle: ') !!}--}}
+            {{--{!! Form::text('calle', null,['class'=>'form-control']) !!}--}}
+        {{--</div>--}}
+    {{--</div>--}}
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('path','Foto') !!}
+            {!! Form::file('path') !!}
+        </div>
+    </div>
+</div>
 
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}
