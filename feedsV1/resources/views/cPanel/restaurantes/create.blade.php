@@ -34,13 +34,4 @@
             </div>
         </div>
     </div>
-    <script>
-    $(function() {
-        $('#ms').change(function() {
-            console.log($(this).val());
-        }).multipleSelect({
-            width: '100%'
-        });
-    });
-</script>
 @endsection

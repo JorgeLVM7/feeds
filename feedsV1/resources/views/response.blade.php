@@ -8,7 +8,7 @@
                 <div class="panel-heading title">Bienvenido</div>
 
                 <div class="panel-body">
-                  <p class="tx"> !Gracias¡ se le envió un correo para completar el registro</p>
+                  <p class="tx"> Gracias, se le envió un correo para completar el registro</p>
                 </div>
             </div>
         </div>

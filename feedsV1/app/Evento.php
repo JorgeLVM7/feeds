@@ -3,11 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
 
-class Promocion extends Model
+class Evento extends Model
 {
-    public $table = 'promocion';
+    public $table = 'evento';
     
     protected $fillable = [
         'nombre', 'descripcion', 'fecha', 'hora_inico', 'hora_final', 'path'

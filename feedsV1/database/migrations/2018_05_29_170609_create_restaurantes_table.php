@@ -32,10 +32,8 @@ class CreateRestaurantesTable extends Migration
             $table->string('latitud');
             $table->string('longitud');
             $table->string('RFC');
-            $table->string('foto')->nullable();
+            $table->string('path')->nullable();
             $table->timestamps();
-            $table->integer('users_id_user')->unsigned();
-            $table->foreign('user_id_user')->references('id')->on('users');
         });
     }
 
@@ -47,7 +45,5 @@ class CreateRestaurantesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('restaurantes');
-        $table->dropForeign('users_id_user');
-        $table->dropColumn('users_id_user');
     }
 }

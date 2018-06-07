@@ -118,12 +118,6 @@
             </select>
         </div>
     </div>
-    {{--<div class="col-md-6">--}}
-        {{--<div class="form-group">--}}
-            {{--{!! Form::label('calle','Calle: ') !!}--}}
-            {{--{!! Form::text('calle', null,['class'=>'form-control']) !!}--}}
-        {{--</div>--}}
-    {{--</div>--}}
 </div>
 
 <div class="row">
