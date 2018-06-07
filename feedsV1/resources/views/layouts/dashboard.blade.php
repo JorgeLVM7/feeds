@@ -80,6 +80,7 @@
                 <a href="" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-heart"></i> <span class="d-none d-md-inline">Inicio</span></a>
                 <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-list"></i> <span class="d-none d-md-inline">Mapa</span></a>
                 <a href="{{route('promocion.index')}}" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-clock-o"></i> <span class="d-none d-md-inline">Promoción</span></a>
+                <a href="{{route('evento.index')}}" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-clock-o"></i> <span class="d-none d-md-inline">Evento</span></a>
                 <a href="{{route('restaurantes.index')}}" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-th"></i> <span class="d-none d-md-inline">Restaurante</span></a>
 
                 <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-th"></i> <span class="d-none d-md-inline">Sucursal</span></a>
@@ -165,6 +166,26 @@
   $('#hora_final').timepicker({
     locale: 'es-es'
   });
+</script>
+<!--JS de Fecha de evento-->
+<script>
+    $('#datepicker').datepicker({
+        locale: 'es-es',
+        uiLibrary: 'bootstrap4'
+    });
+</script>
+
+<!--JS de horario-inicio de evento -->
+<script>
+    $('#time_in').timepicker({
+        locale: 'es-es'
+    });
+</script>
+<!--JS de horario-final de evento -->
+<script>
+    $('#time_out').timepicker({
+        locale: 'es-es'
+    });
 </script>
 
 <script type="text/javascript">
