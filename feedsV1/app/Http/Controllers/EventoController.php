@@ -10,9 +10,12 @@ class EventoController extends Controller
 {
     public function index()
     {
-      $evento = Evento::orderBy('id','DESC');
+      $evento = Evento::orderBy('id','DESC')
+      ->paginate();
+
+      return view('cPanel.evento.index',compact('evento'));
     }
-    public function show($id)
+    public function show()
     {
       # code...
     }

@@ -30,3 +30,5 @@ Route::resource('products', 'ProductsController');
 Route::resource('restaurantes','RestauranteController');
 
 Route::resource('promocion','PromocionController');
+
+Route::resource('evento','EventoController');
