@@ -383,7 +383,7 @@ img.img-responsive {
     					<table width="100%">
     						<tr>
     							<td class="footer">
-    								<img src="https://s19.postimg.cc/rgln5cqgj/feeds.png">
+    								<img src="https://s19.postimg.cc/wsjds9pj7/feeds_blanco.png">
     								<p class="footer">Contacto: feedscampeche@gmail.com<br>&copy; feeds, 2018.<br></p>
     							</td>
     						</tr>
