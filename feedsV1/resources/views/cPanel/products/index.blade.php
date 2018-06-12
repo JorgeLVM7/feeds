@@ -2,5 +2,7 @@
 
 
 @section('content')
- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, magnam dolor dolorem in, ipsum deserunt delectus rem aperiam maxime amet sapiente qui sequi quae atque obcaecati veniam quis fugiat eveniet.</p>
+ <div class="page-header">
+    <h2>Bienvenido a Feeds {{ Auth::user()->name }}</h2>
+ </div>
 @endsection

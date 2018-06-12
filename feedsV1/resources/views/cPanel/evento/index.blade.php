@@ -6,14 +6,14 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-10">
-                    <h1>Evento</h1>
+                    <h1 class="c_white">Evento</h1>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-outline-dark float-right" href="{{route('evento.create')}}">Nuevo</a>
+                    <a class="btn btn-light float-right" href="{{route('evento.create')}}">Nuevo</a>
                 </div>
             </div>
             @include('cPanel.evento.fragment.info')
-            <table class="table table-hover ">
+            <table class="table table-hover c_white ">
                 <thead>
                 <tr>
                     <th>Nombre</th>
