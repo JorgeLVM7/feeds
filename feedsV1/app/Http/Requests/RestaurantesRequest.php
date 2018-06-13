@@ -24,9 +24,16 @@ class RestaurantesRequest extends FormRequest
     public function rules()
     {
         return [
-//            'nombre'=> 'required',
-//            'descripcion'=> 'required',
-//            'category'=> 'required',
+            'nombre'=> 'required',
+            'descripcion'=> 'required',
+            'sitio_web'=> 'required',
+            'email' => 'required',
+            'calle' => 'required',
+            'no_int' => 'required',
+            'no_ext' => 'required',
+            'colonia' => 'required',
+            'codigo_postal' => 'required',
+            'telefono' => 'required',
         ];
     }
 }

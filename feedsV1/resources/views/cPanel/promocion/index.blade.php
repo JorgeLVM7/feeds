@@ -34,7 +34,7 @@
                         <td>{{ $promo ->hora_final }}</td>
                         <td>
                             <div class="btn-group btn-group-toggle" >
-                                <a href="#" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
+                                <a href="{{ route('promocion.show', $promo->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
 
                                 <a href="#" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
 

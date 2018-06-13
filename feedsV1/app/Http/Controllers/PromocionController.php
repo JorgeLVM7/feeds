@@ -18,7 +18,8 @@ class PromocionController extends Controller
     }
     public function show($id)
     {
-      # code...
+        $promocion = Promocion::find($id);
+        return view('cPanel.promocion.show', compact('promocion'));
     }
     public function store(PromocionRequest $request)
     {
