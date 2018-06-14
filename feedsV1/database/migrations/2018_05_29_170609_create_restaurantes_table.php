@@ -19,7 +19,9 @@ class CreateRestaurantesTable extends Migration
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('sitio_web');
-            $table->string('categoria');
+            $table->integer('idcategoria1');
+            $table->integer('idcategoria2');
+            $table->integer('idcategoria3');
             $table->string('email')->unique();
             $table->string('calle');
             $table->integer('no_int');
