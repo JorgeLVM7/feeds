@@ -250,7 +250,7 @@ p.center {
 	width: 100%;
 	background-color: #585858;
 	Margin: 0 auto;
-    color: #FFF;
+    color: #fff;
 }
 .footer  img {
 	max-width: 135px;
@@ -260,7 +260,7 @@ p.center {
 }
 p.footer {
 	text-align: center;
-	color: #FFF!important;
+	color: #fff!important;
 	line-height: 30px;
 	padding-bottom: 4%;
     text-transform: uppercase;
