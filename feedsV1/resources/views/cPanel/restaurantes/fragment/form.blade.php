@@ -24,7 +24,37 @@
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('categoria','Categoría ') !!}
+            {!! Form::label('categoria','Categoría: ') !!}
+            {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
+                                        'Food Truck'=>'Food Truck',
+                                        'Comida economica' => 'Comida economica',
+                                        'Bar & Snack'=>'Bar & Snack',
+                                        'Mariscos'=>'Mariscos']
+                                        , null,['class'=>'form-control']
+        ) !!}
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('categoria','Categoría 2: ') !!}
+            {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
+                                        'Food Truck'=>'Food Truck',
+                                        'Comida economica' => 'Comida economica',
+                                        'Bar & Snack'=>'Bar & Snack',
+                                        'Mariscos'=>'Mariscos']
+                                        , null,['class'=>'form-control']
+        ) !!}
+
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('categoria','Categoría 3: ') !!}
             {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
                                         'Food Truck'=>'Food Truck',
                                         'Comida economica' => 'Comida economica',
