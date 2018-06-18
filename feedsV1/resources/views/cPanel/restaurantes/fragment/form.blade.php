@@ -24,7 +24,7 @@
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('categoria','Categoría: ') !!}
+            {!! Form::label('categoria','Categoría: (Si maneja más de 1 categoria, por favor aregregarlos abajo) ') !!}
             {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
                                         'Food Truck'=>'Food Truck',
                                         'Comida economica' => 'Comida economica',
