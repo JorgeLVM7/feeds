@@ -7,10 +7,10 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-10">
-                            <h1>Agregar restaurante</h1>
+                            <h1 class="c_white">Agregar restaurante</h1>
                         </div>
                         <div class="col-2">
-                            <a class="btn btn-outline-dark float-right" href="{{route('restaurantes.index')}}">Cancelar</a>
+                            <a class="btn btn-light float-right" href="{{route('restaurantes.index')}}">Cancelar</a>
                         </div>
                     </div>
                     <hr>
@@ -19,7 +19,7 @@
                     @include('cPanel.restaurantes.fragment.error')
 
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 c_white">
                             {{--<div class="row">--}}
                                 {!! Form::open(['route'=>'restaurantes.store', 'files'=>true]) !!}
 
