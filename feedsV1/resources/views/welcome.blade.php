@@ -23,7 +23,7 @@
         <a class="a-menu navbar-brand" href="#"><img class="logo" src="img/feeds.png" alt=""></a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active links">
-                <a class="a-menu nav-link" href="#">Principal<span class="sr-only">(current)</span></a>
+                <a class="a-menu nav-link" href="/">Principal<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="a-menu nav-link links" href="#">Mapa</a>

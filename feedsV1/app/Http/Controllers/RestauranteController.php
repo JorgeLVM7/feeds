@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Restaurantes;
+use App\Categorias;
 use Illuminate\Http\Request;
 use App\Http\Requests\RestaurantesRequest;
 
@@ -27,7 +28,9 @@ class RestauranteController extends Controller
         $restaurante->nombre = $request->nombre;
         $restaurante->descripcion =$request->descripcion;
         $restaurante->sitio_web = $request->sitio_web;
-        $restaurante->categoria = $request->categoria;
+        $restaurante->idcategoria1 = $request->idcategoria1;
+        $restaurante->idcategoria2 = $request->idcategoria2;
+        $restaurante->idcategoria3 = $request->idcategoria3;
         $restaurante->email = $request->email;
         $restaurante->calle = $request->calle;
         $restaurante->no_int = $request->no_int;
@@ -42,14 +45,14 @@ class RestauranteController extends Controller
         $restaurante->latitud = 'AM';
         $restaurante->path = $request->path;
         $restaurante->users_id_user = '1';
-//        $restaurante->foto = $request->foto;
         $restaurante->save();
         return redirect()-> route('restaurantes.index')
         ->with('info','El restaurante fue guardado correctamente');
     }
-    public function create()
+    public function create() 
     {
-        return view('cPanel.restaurantes.create');
+        $categorias = Categorias::all();
+        return view('cPanel.restaurantes.create', compact('categorias'));
     }
     public function update()
     {

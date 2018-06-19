@@ -24,15 +24,13 @@
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('categoria','Categoría: (Si maneja más de 1 categoria, por favor aregregarlos abajo) ') !!}
-            {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
-                                        'Food Truck'=>'Food Truck',
-                                        'Comida economica' => 'Comida economica',
-                                        'Bar & Snack'=>'Bar & Snack',
-                                        'Mariscos'=>'Mariscos']
-                                        , null,['class'=>'form-control']
-        ) !!}
-
+            {!! Form::label('idcategoria1','Categoría: (Si maneja más de 1 categoria, por favor aregregarlos abajo) ') !!}
+            <select name="idcategoria1" class="form-control">
+            <option value="">Selecciona tu categoria</option>
+                @foreach ($categorias as $categoria)
+                        <option value="{{ $categoria->id }}">{{$categoria->categoria}}</option>
+                @endforeach
+            </select>
         </div>
     </div>
 </div>
@@ -40,29 +38,25 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('categoria','Categoría 2: ') !!}
-            {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
-                                        'Food Truck'=>'Food Truck',
-                                        'Comida economica' => 'Comida economica',
-                                        'Bar & Snack'=>'Bar & Snack',
-                                        'Mariscos'=>'Mariscos']
-                                        , null,['class'=>'form-control']
-        ) !!}
-
+            {!! Form::label('idcategoria2','Categoría 2: ') !!}
+            <select name="idcategoria2" class="form-control">
+            <option value="">Selecciona tu categoria</option>
+                @foreach ($categorias as $cat)
+                        <option value="{{ $cat->id }}">{{$cat->categoria}}</option>
+                @endforeach
+            </select>
         </div>
 
     </div>
     <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('categoria','Categoría 3: ') !!}
-            {!! Form::select('categoria',['Pizzeria'=>'Pizzeria',
-                                        'Food Truck'=>'Food Truck',
-                                        'Comida economica' => 'Comida economica',
-                                        'Bar & Snack'=>'Bar & Snack',
-                                        'Mariscos'=>'Mariscos']
-                                        , null,['class'=>'form-control']
-        ) !!}
-
+            <select name="idcategoria3" class="form-control">
+            <option value="">Selecciona tu categoria</option>
+                @foreach ($categorias as $ctg)
+                        <option value="{{ $ctg->id }}">{{$ctg->categoria}}</option>
+                @endforeach
+            </select>
         </div>
     </div>
 </div>
