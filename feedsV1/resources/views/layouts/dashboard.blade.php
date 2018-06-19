@@ -37,7 +37,7 @@
             </div>
             <div class="list-group border-0 card text-center text-md-left menu_users">
                 <h5 >
-                    <a href="#menu1" class="list-group-item d-inline-block collapsed menu_users c_white" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">Bienvenido {{ Auth::user()->name }}</span> </a>
+                    <a href="#menu1" class="list-group-item d-inline-block collapsed menu_users c_white" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">{{ Auth::user()->name }}</span> </a>
 
                 </h5>
                 <div class="collapse menu_users" id="menu1">
@@ -49,7 +49,7 @@
                 </div>
                 @endif
 
-                <a href="" class="list-group-item d-inline-block collapsed menu_users" data-parent="#sidebar"><i class="fa fa-heart"></i> <span class="d-none d-md-inline">Inicio</span></a>
+                <a href="{{route('products.index')}}" class="list-group-item d-inline-block collapsed menu_users" data-parent="#sidebar"><i class="fa fa-heart"></i> <span class="d-none d-md-inline">Inicio</span></a>
                 <a href="#" class="list-group-item d-inline-block collapsed menu_users" data-parent="#sidebar"><i class="fa fa-list"></i> <span class="d-none d-md-inline">Mapa</span></a>
                 <a href="{{route('promocion.index')}}" class="list-group-item d-inline-block collapsed menu_users" data-parent="#sidebar"><i class="fa fa-clock-o"></i> <span class="d-none d-md-inline">Promoción</span></a>
                 <a href="{{route('evento.index')}}" class="list-group-item d-inline-block collapsed menu_users" data-parent="#sidebar"><i class="fa fa-clock-o"></i> <span class="d-none d-md-inline">Evento</span></a>
@@ -95,13 +95,15 @@
 <!--JS de horario-inicio -->
 <script>
   $('#hora_inicio').timepicker({
-    locale: 'es-es'
+    locale: 'es-es',
+    uiLibrary: 'bootstrap4'
   });
 </script>
 <!--JS de horario-final -->
 <script>
   $('#hora_final').timepicker({
-    locale: 'es-es'
+    locale: 'es-es',
+    uiLibrary: 'bootstrap4'
   });
 </script>
 <!--JS de Fecha de evento-->
@@ -115,13 +117,15 @@
 <!--JS de horario-inicio de evento -->
 <script>
     $('#time_in').timepicker({
-        locale: 'es-es'
+        locale: 'es-es',
+        uiLibrary: 'bootstrap4'
     });
 </script>
 <!--JS de horario-final de evento -->
 <script>
     $('#time_out').timepicker({
-        locale: 'es-es'
+        locale: 'es-es',
+        uiLibrary: 'bootstrap4'
     });
 </script>
 
