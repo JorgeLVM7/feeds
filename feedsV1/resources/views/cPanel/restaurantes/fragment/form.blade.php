@@ -153,6 +153,18 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <div id="map" style="widows: 100%;height:300px;"></div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" name="latitud" id="latitud" value="0">
+
+<input type="hidden" name="longitud" id="longitud" value="0">
+
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}
 

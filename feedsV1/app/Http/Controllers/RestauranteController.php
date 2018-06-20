@@ -41,8 +41,8 @@ class RestauranteController extends Controller
         $restaurante->telefono = $request->telefono;
         $restaurante->RFC = $request->RFC;
         $restaurante->horario = $request->horario;
-        $restaurante->longitud = 'AM';
-        $restaurante->latitud = 'AM';
+        $restaurante->longitud = $request->latitud;
+        $restaurante->latitud = $request->longitud;
         $restaurante->path = $request->path;
         $restaurante->users_id_user = '1';
         $restaurante->save();
