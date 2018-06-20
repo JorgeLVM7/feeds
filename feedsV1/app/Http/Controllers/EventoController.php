@@ -15,9 +15,10 @@ class EventoController extends Controller
 
       return view('cPanel.evento.index',compact('evento'));
     }
-    public function show()
+    public function show($id)
     {
-      # code...
+        $evento = Evento::find($id);
+        return view('cPanel.evento.show', compact('evento'));
     }
     public function store(EventoRequest $request)
     {
@@ -36,16 +37,30 @@ class EventoController extends Controller
     {
         return view('cPanel.evento.create');
     }
-    public function update()
+    public function update(EventoRequest $request, $id)
     {
-        # code...
+        $evento = Evento::find($id);
+
+        $evento->nombre = $request->nombre;
+        $evento->descripcion =$request->descripcion;
+        $evento->fecha = $request->fecha;
+        $evento->hora_inicio = $request->hora_inicio;
+        $evento->hora_final = $request->hora_final;
+        $evento->path = $request->path;
+        $evento->save();
+
+        return redirect()-> route('cPanel.evento.index')
+            ->with('info','El evento fue actualizado correctamente');
     }
-    public function destroy()
+    public function destroy($id)
     {
-        # code...
+        $evento = Evento::find($id);
+        $evento ->delete();
+        return back()->with('info','El evento fue eliminado correctamente');
     }
-    public function edit()
+    public function edit($id)
     {
-        # code...
+        $evento = Evento::find($id);
+        return view('cPanel.evento.edit', compact('evento'));
     }
 }

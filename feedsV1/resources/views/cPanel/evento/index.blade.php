@@ -34,11 +34,11 @@
                         <td>{{ $ev ->hora_final }}</td>
                         <td>
                             <div class="btn-group btn-group-toggle" >
-                                <a href="#" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
+                                <a href="{{ route('evento.show', $ev->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
 
-                                <a href="#" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+                                <a href="{{ route('evento.edit', $ev->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
 
-                                <form class="btn-group btn-group-toggle" action="#" method="POST">
+                                <form class="btn-group btn-group-toggle" action="{{ route('evento.destroy', $ev->id)}}" method="POST">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button>

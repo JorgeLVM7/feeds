@@ -84,7 +84,7 @@
 
 
 
-<!--JS de Fecha-->
+<!--JS de Fecha de promocion-->
 <script>
   $('#fecha').datepicker({
             locale: 'es-es',
@@ -92,14 +92,14 @@
         });
 </script>
 
-<!--JS de horario-inicio -->
+<!--JS de horario-inicio promocion -->
 <script>
   $('#hora_inicio').timepicker({
     locale: 'es-es',
     uiLibrary: 'bootstrap4'
   });
 </script>
-<!--JS de horario-final -->
+<!--JS de horario-final promocion-->
 <script>
   $('#hora_final').timepicker({
     locale: 'es-es',

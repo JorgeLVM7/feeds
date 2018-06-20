@@ -38,16 +38,29 @@ class PromocionController extends Controller
     {
         return view('cPanel.promocion.create');
     }
-    public function update()
+    public function update(PromocionRequest $request, $id)
     {
-        # code...
+        $promocion = Promocion::find($id);
+
+        $promocion->nombre = $request->nombre;
+        $promocion->descripcion =$request->descripcion;
+        $promocion->fecha = $request->fecha;
+        $promocion->hora_inicio = $request->hora_inicio;
+        $promocion->hora_final = $request->hora_final;
+        $promocion->path = $request->path;
+        $promocion->save();
+        return redirect()-> route('cPanel.promocion.index')
+        ->with('info','La promocion fue actualizada correctamente');
     }
-    public function destroy()
+    public function destroy($id)
     {
-        # code...
+        $promocion = Promocion::find($id);
+        $promocion ->delete();
+        return back()->with('info','La promoción fue eliminado correctamente');
     }
-    public function edit()
+    public function edit($id)
     {
-        # code...
+        $promocion = Promocion::find($id);
+        return view('cPanel.promocion.edit', compact('promocion'));
     }
 }

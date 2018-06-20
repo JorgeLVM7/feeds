@@ -253,7 +253,7 @@ p.center {
     color: #fff;
 }
 .footer  img {
-	max-width: 135px;
+	max-width: 80px;
 	Margin: 0 auto;
 	display: block;
 	padding: 4% 0 1% 0;
