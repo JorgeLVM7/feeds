@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
     <title> Feeds </title>
 </head>
-<body class="bg_dashboard">
+<body class="bg-dark">
 <div class="container-fluid">
     <div class="row d-flex d-md-block flex-nowrap wrapper ">
 
@@ -61,7 +61,7 @@
 
 
         </div>
-        <main class="col-md-11 col px-5 pl-md-2 pt-2 main mx-auto  ">
+        <main class="col-md-11 col px-5 pl-md-2 pt-2 main mx-auto  bg-dark">
             <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a>
 
 

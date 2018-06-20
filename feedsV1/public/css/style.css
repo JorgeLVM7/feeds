@@ -48,15 +48,15 @@ h1, h2, h3,h4{
 /* Menu de usuarios */
 
 .menu_users{
-    background:#F96332 !important;
+    background:#EB7947 !important;
     border-color: transparent !important;
 }
 /* Contenido de Dashboard */
 
-.bg_dashboard{
-    background: #0B2341; /* For browsers that do not support gradients */
-    background: linear-gradient(to right, #0B2341 , #2A5788);
-}
+/*.bg_dashboard{*/
+    /*background: #0B2341; !* For browsers that do not support gradients *!*/
+    /*background: linear-gradient(to right, #0B2341 , #2A5788);*/
+/*}*/
 
 .c_white{
     color: #ffffff !important;
