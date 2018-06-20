@@ -36,7 +36,7 @@
 </div>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria2','Categoría 2: ') !!}
             <select name="idcategoria2" class="form-control">
@@ -48,7 +48,7 @@
         </div>
 
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('categoria','Categoría 3: ') !!}
             <select name="idcategoria3" class="form-control">
@@ -59,16 +59,14 @@
             </select>
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('email','Correo electrónico: ') !!}
             {!! Form::text('email', null,['class'=>'form-control']) !!}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('calle','Calle: ') !!}
             {!! Form::text('calle', null,['class'=>'form-control']) !!}
@@ -76,59 +74,51 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('no_int','Número interior: ') !!}
             {!! Form::text('no_int', null,['class'=>'form-control']) !!}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('no_ext','Número exterior: ') !!}
             {!! Form::text('no_ext', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('colonia','Colonia: ') !!}
             {!! Form::text('colonia', null,['class'=>'form-control']) !!}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('codigo_postal','Código Postal: ') !!}
             {!! Form::text('codigo_postal', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('referencia','Referencia: ') !!}
             {!! Form::text('referencia', null,['class'=>'form-control']) !!}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('telofono','Teléfono: ') !!}
             {!! Form::text('telefono', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('RFC','RFC: ') !!}
+
             {!! Form::text('RFC', null,['class'=>'form-control']) !!}
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-1">
         <div class="form-group">
             {!! Form::label('horario','Horario') !!}
             <select name="horario" id="horario" multiple="multiple">
@@ -154,9 +144,9 @@
 </div>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="form-group">
-            <div id="map" style="widows: 100%;height:300px;"></div>
+            <div id="map" style="widows: 100%; height:500px;"></div>
         </div>
     </div>
 </div>

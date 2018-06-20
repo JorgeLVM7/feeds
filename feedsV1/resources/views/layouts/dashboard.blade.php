@@ -157,8 +157,8 @@
               lng: position.coords.longitude
             };
 
-            $('#latitud').val(position.coords.latitude,)
-            $('#longitud').val(position.coords.longitude,)
+            $('#latitud').val(position.coords.latitude)
+            $('#longitud').val(position.coords.longitude)
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
