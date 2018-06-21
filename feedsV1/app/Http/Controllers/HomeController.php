@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Promocion;
+use App\Evento;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('cPanel/products/index');
+
+        $promociones = Promocion::orderBy('id', 'DESC');
+
+        $eventos = Evento::orderBy('id', 'DESC');
+
+
+        return view('cPanel.products.index',compact('promociones','eventos'));
     }
 }
