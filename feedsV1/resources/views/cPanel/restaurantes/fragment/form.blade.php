@@ -165,9 +165,9 @@
     </div>
 </div>
 
-<input type="hidden" name="latitud" id="latitud" value="0">
+<input type="hidden" name="latitud" id="lat" value="0">
 
-<input type="hidden" name="longitud" id="longitud" value="0">
+<input type="hidden" name="longitud" id="lng" value="0">
 
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}

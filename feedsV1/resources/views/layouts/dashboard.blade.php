@@ -164,17 +164,29 @@
               lng: position.coords.longitude
             };
 
-            $('#latitud').val(position.coords.latitude)
-            $('#longitud').val(position.coords.longitude)
+            $('#latitud').val(position.coords.latitude,)
+            $('#longitud').val(position.coords.longitude,)
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            //infoWindow.setContent('Location found.');
             map.setCenter(pos);
 
              var marker = new google.maps.Marker({
-                position: pos,
                 map: map,
+                position: pos,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
              });
+             marker.addListener('click', toggleBounce);
+            
+
+           function toggleBounce() {
+             if (marker.getAnimation() !== null) {
+               marker.setAnimation(null);
+            } else {
+              marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
 
 
           }, function() {

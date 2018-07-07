@@ -3,13 +3,13 @@
 
 @section('content')
  <div class="page-header">
-    <h2 class="c_white">Bienvenido a Feeds {{ Auth::user()->name }}</h2>
+    <h2 class="c_white">Bienvenido a Feeds, {{ Auth::user()->name }}</h2>
  </div>
 
 
-    <div class="row c_white">
+    <div class="row">
         <div class="col-12">
-            <h1>Eventos </h1>
+            <h1 class="c_white">Eventos </h1>
         </div>
         <div class="row">
             <br>
@@ -33,11 +33,11 @@
 
     <div class="row">
         <div class="col-12">
-            <h1>Promociones</h1>
+            <h1 class="c_white">Promociones</h1>
         </div>
         <div class="row">
             <br>
-        </div>
+       {--!</div>
         @foreach($promociones as $promocion)
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="../images/{{$promocion->path}}" alt="Card image cap">
