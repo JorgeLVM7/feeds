@@ -16,6 +16,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
     <title> Feeds </title>
+
+    {{-- Select2 --}}
+
+    {{--<link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />--}}
+    {{--<script src="vendor/select2/dist/js/select2.min.js"></script>--}}
+
+
 </head>
 <body class="bg-dark">
 <div class="container-fluid">
@@ -190,5 +197,16 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd9EjNxKWJXePrvVy342SA4-WqdnjzJ74&callback=initMap">
     </script>
 
+{{-- Select2--}}
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-multiple').select2();
+    });
+</script>
+
+
+{{--Select2 script from CDN--}}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </body>
 </html>

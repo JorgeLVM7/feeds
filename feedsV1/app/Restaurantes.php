@@ -11,6 +11,10 @@ class Restaurantes extends Model
         'nombre', 'descripcion', 'sitio_web', 'idcategoria1', 'email', 'calle', 'no_int', 'no_ext', 'colonia', 'codigo_postal', 'referencia', 'telefono', 'RFC','horario','latitud','longitud','users_id_user','path'
     ];
 
+    protected $casts = [
+        'horario' => 'string',
+    ];
+
     public function setPathAttribute($path)
     {
         if(!empty($path)){
