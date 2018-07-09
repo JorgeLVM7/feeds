@@ -12,7 +12,7 @@ class Restaurantes extends Model
     ];
 
     protected $casts = [
-        'horario' => 'string',
+        'horario' => 'array',
     ];
 
     public function setPathAttribute($path)

@@ -132,7 +132,7 @@
                 {{--<option value="Sábado">Sábado</option>--}}
                 {{--<option value="Domingo">Domingo</option>--}}
             {{--</select>--}}
-            <select class="js-example-basic-multiple" name="horario[]" multiple="multiple">
+            <select class="js-example-basic-multiple" name="horario[]" multiple="multiple" style="width: 200px">
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miércoles">Miércoles</option>
