@@ -61,3 +61,7 @@ h1, h2, h3,h4{
 .c_white{
     color: #ffffff !important;
 }
+
+.c_black{
+    color:  #000 !important;
+}

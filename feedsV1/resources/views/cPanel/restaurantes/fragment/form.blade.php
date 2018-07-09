@@ -157,7 +157,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row c_black">
     <div class="col-md-12">
         <div class="form-group">
             <div id="map" style="widows: 100%; height:500px;"></div>
@@ -165,15 +165,14 @@
     </div>
 </div>
 
-<input type="hidden" name="latitud" id="lat" value="0">
+<input type="hidden" name="latitud" id="lat" value="">
 
-<input type="hidden" name="longitud" id="lng" value="0">
+<input type="hidden" name="longitud" id="lng" value="">
 
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}
 
 <div class="form-group">
-    {!! Form::submit('Guardar',['class'=>'btn btn-primary', 'style'=>"cursor: pointer"]) !!}
-
+<input class="btn btn-primary" style="cursor: pointer" value="Guardar" type="submit" >
 </div>
 
