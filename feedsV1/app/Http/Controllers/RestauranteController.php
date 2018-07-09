@@ -40,7 +40,14 @@ class RestauranteController extends Controller
         $restaurante->referencia = $request->referencia;
         $restaurante->telefono = $request->telefono;
         $restaurante->RFC = $request->RFC;
-        $restaurante->horario = $request->horario;
+
+//        $horarios = implode(',',$_POST['horario']);
+
+        $horarios = implode(' , ', $_POST['horario']);
+
+        $restaurante -> horario = $request-> $horarios;
+
+//        $restaurante->horario = $request->horario;
         $restaurante->longitud = $request->latitud;
         $restaurante->latitud = $request->longitud;
         $restaurante->path = $request->path;
