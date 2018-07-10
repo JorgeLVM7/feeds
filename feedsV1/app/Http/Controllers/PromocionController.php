@@ -49,7 +49,7 @@ class PromocionController extends Controller
         $promocion->hora_final = $request->hora_final;
         $promocion->path = $request->path;
         $promocion->save();
-        return redirect()-> route('cPanel.promocion.index')
+        return redirect()-> route('promocion.index')
         ->with('info','La promocion fue actualizada correctamente');
     }
     public function destroy($id)

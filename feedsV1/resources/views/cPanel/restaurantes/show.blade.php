@@ -1,88 +1,81 @@
 @extends('layouts.dashboard2')
 
 @section('content')
-    <div class="row">
-        <div class="col-10 c_white">
-            <h1>Vista previa de {{ $restaurante->nombre }}</h1>
+    <div class="container">
+        <div class="row">
+            <h1>Vista previa </h1>
         </div>
-        <div class="col-2">
-            <a class="btn btn-light float-right" href="{{route('restaurantes.index')}}">Regresar</a>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img" src="/images/{{$restaurante->path}}" alt="Card image">
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Restaurante:  </label>
+                        <h1>{{$restaurante->nombre}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Descripción: </label>
+
+                        <h6>{{$restaurante->descripcion}}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Descripción: </label>
+
+                        <h6>{{$restaurante->calle}}
+                            {{$restaurante->no_int}}
+                            {{$restaurante->no_ext}}
+                            {{$restaurante->colonia}}
+                            {{$restaurante->referencia }}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="">Código Postal: </label>
+                        <h6>{{$restaurante->codigo_postal}}</h6>
+                    </div>
+                    <div class="col-4">
+                        <label for="">Teléfono: </label>
+                        <h6>{{$restaurante->codigo_postal}}</h6>
+                    </div>
+                    <div class="col-4">
+                        <label for="">RFC: </label>
+                        <h6>{{$restaurante->RFC}}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Correo Electrónico</label>
+                        <h6>{{$restaurante->email}}</h6>
+                    </div>
+                    <div class="col-6">
+                        <label for="">Horario</label>
+{{--                        <h6>{{$restaurante->horario }}</h6>--}}
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-    </div>
-    <div class="row">
-        <br>
-    </div>
+        <div class="row">
+            <div class="col-12">
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for=""> Ubicación: </label>
 
-    <div class="row c_white">
-        <div class="col-3">
-            <h5>Nombre de restaurante:</h5>
+            </div>
         </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> nombre }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5>Descripción:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> descripcion }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5>Sitio Web:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> sitio_web }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5>Calle:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> calle }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5># interior:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> no_int }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5># exterior:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> no_ext }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5>Colonia:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> colonia }}</h1>
-        </div>
-    </div>
-    <div class="row c_white">
-        <div class="col-3">
-            <h5>Código Postal:</h5>
-        </div>
-        <div class="col-9">
-            <h1>{{$restaurante -> codigo_postal }}</h1>
-        </div>
-    </div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row">
 
     </div>
-
 @endsection
