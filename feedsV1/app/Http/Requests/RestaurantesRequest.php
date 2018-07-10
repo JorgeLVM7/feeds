@@ -37,4 +37,21 @@ class RestaurantesRequest extends FormRequest
             'telefono' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'nombre.required'       =>'El campo Nombre del Restauarante es obligatorio',
+            'descripcion.required'  =>'El campo Descripción es obligatorio',
+            'sitio_web.required'    =>'El campo Sitio Web es obligatorio',
+            'idcategoria1.required' =>'El campo Categoría 1 es obligatorio',
+            'email.required'        =>'El campo Correo Electrónico es obligatorio',
+            'calle.required'        =>'El campo Calle es obligatorio',
+            'no_int.required'       =>'El campo Número interior es obligatorio',
+            'no_ext.required'       =>'El campo Número exterior es obligatorio',
+            'colonia.required'      =>'El campo Colonia es obligatorio',
+            'codigo_postal.required'=>'El campo Código Postal es obligatorio',
+            'telefono.required'     =>'El campo Teléfono es obligatorio',
+        ];
+    }
 }
