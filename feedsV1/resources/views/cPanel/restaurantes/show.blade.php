@@ -30,11 +30,11 @@
                     <div class="col-12">
                         <label for="">Descripción: </label>
 
-                        <h6>{{$restaurante->calle}}
+                        <h6>Calle {{$restaurante->calle}}, 
                             {{$restaurante->no_int}}
                             {{$restaurante->no_ext}}
-                            {{$restaurante->colonia}}
-                            {{$restaurante->referencia }}</h6>
+                            Col. {{$restaurante->colonia}},
+                            Entre {{$restaurante->referencia }}</h6>
                     </div>
                 </div>
                 <div class="row">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-6">
                         <label for="">Horario</label>
-{{--                        <h6>{{$restaurante->horario }}</h6>--}}
+                        {{--<h6>{{$restaurante->horario }}</h6>--}}
                     </div>
                 </div>
 

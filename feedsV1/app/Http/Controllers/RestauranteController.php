@@ -48,6 +48,8 @@ class RestauranteController extends Controller
 //        $restaurante -> horario = $restaurante- ;
 
         $restaurante->horario = $request->horario;
+        $restaurante->hora1 = $request->hora1;
+        $restaurante->hora1 = $request->hora2;
         $restaurante->latitud = $request->latitud;
         $restaurante->longitud = $request->longitud;
         $restaurante->path = $request->path;
@@ -88,6 +90,8 @@ class RestauranteController extends Controller
 //        $restaurante -> horario = $restaurante- ;
 
         $restaurante->horario = $request->horario;
+        $restaurante->hora1 = $request->hora1;
+        $restaurante->hora1 = $request->hora2;
         $restaurante->latitud = $request->latitud;
         $restaurante->longitud = $request->longitud;
         $restaurante->path = $request->path;

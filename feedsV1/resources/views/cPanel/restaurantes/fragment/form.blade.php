@@ -123,14 +123,26 @@
         <div class="form-group">
             <label for="horario">Horario</label>
             <select class="form-control select2" name="horario[]" id="horario" multiple="multiple" style="width: 100%">
-                <option value="Miércoles">Miércoles</option>
-                <option value="Sábado">Sábado</option>
-            </select>
-
-
-
-
-
+                <option value="Lu">Lunes</option>
+                <option value="Ma">Martes</option>
+                <option value="Mi">Miércoles</option>
+                <option value="Ju">Jueves</option>
+                <option value="Vi">Viernes</option>
+                <option value="Sa">Sábado</option>
+                <option value="Do">Domingo</option>
+            </select>        
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            {!! Form::label('hora1','hora de apertura:') !!}
+            <input name="hora1" id="timepicker1" width="260" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            {!! Form::label('hora2','hora de clausura:') !!}
+            <input name="hora2" id="timepicker2" width="260" />
         </div>
     </div>
 </div>
