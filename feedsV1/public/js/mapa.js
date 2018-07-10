@@ -43,10 +43,12 @@
         }
         var map = new google.maps.Map($('#map').get(0), mapSettings);
 
+        var img = '/img/icon-rest2.png';
         var marker = new google.maps.Marker({
             position: latlng,
             map: map,
             draggable: true,
+            icon: img,
             title: "Arrastrame!",
             animation: google.maps.Animation.DROP,
         });
