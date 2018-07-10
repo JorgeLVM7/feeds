@@ -32,26 +32,22 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="#">Eventos <span class="sr-only">(current)</span></a>
             </li>
-
-            {{--<li class="nav-item dropdown">--}}
-                {{--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                    {{--Dropdown--}}
-                {{--</a>--}}
-                {{--<div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
-                    {{--<a class="dropdown-item" href="#">Action</a>--}}
-                    {{--<a class="dropdown-item" href="#">Another action</a>--}}
-                    {{--<div class="dropdown-divider"></div>--}}
-                    {{--<a class="dropdown-item" href="#">Something else here</a>--}}
-                {{--</div>--}}
-            {{--</li>--}}
-            {{--<li class="nav-item">--}}
-                {{--<a class="nav-link disabled" href="#">Disabled</a>--}}
-            {{--</li>--}}
         </ul>
-        <a class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Cerrar Sesión </a>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
-        </form>
+       
+
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ Auth::user()->name }}
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+            </div>
+        </div>
+
+
+
     </div>
 </nav>
 
