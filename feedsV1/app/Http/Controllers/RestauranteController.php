@@ -41,15 +41,15 @@ class RestauranteController extends Controller
         $restaurante->telefono = $request->telefono;
         $restaurante->RFC = $request->RFC;
 
-//        $horarios = implode(',',$_POST['hidden_framework']);
+        $horarios = implode(',',$_POST['horario']);
 
 
 
-//        $restaurante -> horario = $restaurante- ;
+        $restaurante -> horario = $horarios;
 
-        $restaurante->horario = $request->horario;
+//        $restaurante->horario = $request->horario;
         $restaurante->hora1 = $request->hora1;
-        $restaurante->hora1 = $request->hora2;
+        $restaurante->hora2 = $request->hora2;
         $restaurante->latitud = $request->latitud;
         $restaurante->longitud = $request->longitud;
         $restaurante->path = $request->path;
@@ -91,7 +91,7 @@ class RestauranteController extends Controller
 
         $restaurante->horario = $request->horario;
         $restaurante->hora1 = $request->hora1;
-        $restaurante->hora1 = $request->hora2;
+        $restaurante->hora2 = $request->hora2;
         $restaurante->latitud = $request->latitud;
         $restaurante->longitud = $request->longitud;
         $restaurante->path = $request->path;

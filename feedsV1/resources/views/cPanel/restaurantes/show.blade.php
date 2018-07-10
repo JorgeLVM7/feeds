@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-6">
                         <label for="">Horario</label>
-                        {{--<h6>{{$restaurante->horario }}</h6>--}}
+                        <h6>{{$restaurante->horario }}</h6>
                     </div>
                 </div>
 
