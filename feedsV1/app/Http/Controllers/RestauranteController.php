@@ -41,13 +41,13 @@ class RestauranteController extends Controller
         $restaurante->telefono = $request->telefono;
         $restaurante->RFC = $request->RFC;
 
-//        $horarios = implode(',',$_POST['horario']);
+//        $horarios = implode(',',$_POST['hidden_framework']);
 
-        $horarios = implode(' , ', $_POST['horario']);
 
-        $restaurante -> horario = $request-> $horarios;
 
-//        $restaurante->horario = $request->horario;
+//        $restaurante -> horario = $restaurante- ;
+
+        $restaurante->horario = $request->horario;
         $restaurante->longitud = $request->latitud;
         $restaurante->latitud = $request->longitud;
         $restaurante->path = $request->path;
@@ -61,17 +61,52 @@ class RestauranteController extends Controller
         $categorias = Categorias::all();
         return view('cPanel.restaurantes.create', compact('categorias'));
     }
-    public function update()
+    public function update(RestaurantesRequest $request, $id)
     {
-        # code...
+        $restaurante = Restaurantes::find($id);
+
+        $restaurante->nombre = $request->nombre;
+        $restaurante->descripcion =$request->descripcion;
+        $restaurante->sitio_web = $request->sitio_web;
+        $restaurante->idcategoria1 = $request->idcategoria1;
+        $restaurante->idcategoria2 = $request->idcategoria2;
+        $restaurante->idcategoria3 = $request->idcategoria3;
+        $restaurante->email = $request->email;
+        $restaurante->calle = $request->calle;
+        $restaurante->no_int = $request->no_int;
+        $restaurante->no_ext = $request->no_ext;
+        $restaurante->colonia = $request->colonia;
+        $restaurante->codigo_postal = $request->codigo_postal;
+        $restaurante->referencia = $request->referencia;
+        $restaurante->telefono = $request->telefono;
+        $restaurante->RFC = $request->RFC;
+
+//        $horarios = implode(',',$_POST['hidden_framework']);
+
+
+
+//        $restaurante -> horario = $restaurante- ;
+
+        $restaurante->horario = $request->horario;
+        $restaurante->longitud = $request->latitud;
+        $restaurante->latitud = $request->longitud;
+        $restaurante->path = $request->path;
+        $restaurante->users_id_user = '1';
+
+
+        $restaurante->save();
+        return redirect()-> route('restaurantes.index')
+            ->with('info','El restaurante fue actualizado correctamente');
     }
     public function destroy()
     {
         # code...
     }
-    public function edit()
+    public function edit($id)
     {
-        # code...
+        $categorias = Categorias::all();
+        $restaurante = Restaurantes::find($id);
+        return view('cPanel.restaurantes.edit', compact('restaurante','categorias'));
     }
 }
 

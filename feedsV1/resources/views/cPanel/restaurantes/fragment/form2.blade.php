@@ -26,23 +26,23 @@
         <div class="form-group">
             {!! Form::label('idcategoria1','Categoría 1:  ') !!}
             <select name="idcategoria1" class="form-control">
-            <option value="">Selecciona tu categoria</option>
+                <option value="">Selecciona tu categoria</option>
                 @foreach ($categorias as $categoria)
-                        <option value="{{ $categoria->id }}">{{$categoria->categoria}}</option>
+                    <option value="{{ $categoria->id }}">{{$categoria->categoria}}</option>
                 @endforeach
             </select>
         </div>
     </div>
-{{--</div>--}}
+    {{--</div>--}}
 
-{{--<div class="row">--}}
+    {{--<div class="row">--}}
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria2','Categoría 2: ') !!}
             <select name="idcategoria2" class="form-control">
-            <option value="">Selecciona tu categoria</option>
+                <option value="">Selecciona tu categoria</option>
                 @foreach ($categorias as $cat)
-                        <option value="{{ $cat->id }}">{{$cat->categoria}}</option>
+                    <option value="{{ $cat->id }}">{{$cat->categoria}}</option>
                 @endforeach
             </select>
         </div>
@@ -52,11 +52,14 @@
         <div class="form-group">
             {!! Form::label('categoria','Categoría 3: ') !!}
             <select name="idcategoria3" class="form-control">
-            <option value="">Selecciona tu categoria</option>
+                <option value="">Selecciona tu categoria</option>
                 @foreach ($categorias as $ctg)
-                        <option value="{{ $ctg->id }}">{{$ctg->categoria}}</option>
+                    <option value="{{ $ctg->id }}">{{$ctg->categoria}}</option>
                 @endforeach
             </select>
+
+            {{--{!! Form::label('idcategoria3','Calle: ') !!}--}}
+            {{--{!! Form::text('idcategoria3', null,['class'=>'form-control']) !!}--}}
         </div>
     </div>
 
@@ -72,8 +75,8 @@
             {!! Form::text('calle', null,['class'=>'form-control']) !!}
         </div>
     </div>
-{{--</div>--}}
-{{--<div class="row">--}}
+    {{--</div>--}}
+    {{--<div class="row">--}}
     <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('no_int','Número interior: ') !!}
