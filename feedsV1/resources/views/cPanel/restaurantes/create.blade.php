@@ -10,7 +10,6 @@
                             <h1 class="c_white">Agregar restaurante</h1>
                         </div>
                         <div class="col-2">
-                            <a class="btn btn-light float-right" href="{{route('restaurantes.index')}}">Cancelar</a>
                         </div>
                     </div>
                     <hr>

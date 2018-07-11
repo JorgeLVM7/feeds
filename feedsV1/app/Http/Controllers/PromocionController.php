@@ -11,8 +11,7 @@ class PromocionController extends Controller
 {
     public function index()
     {
-        $promocion = Promocion::orderBy('id','DESC')
-        ->paginate();
+        $promocion = Promocion::orderBy('id','DESC')->paginate();
 
         return view('cPanel.promocion.index',compact('promocion'));
     }

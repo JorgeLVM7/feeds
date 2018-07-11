@@ -33,7 +33,7 @@
                 <a class="nav-link text-white" href="#">Eventos <span class="sr-only">(current)</span></a>
             </li>
         </ul>
-       
+
 
         <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,6 +43,10 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+
             </div>
         </div>
 
@@ -54,6 +58,7 @@
 
 {{--contenido de los modulos --}}
 <div class="container-fluid">
+    <br>
     @yield('content')
 </div>
 

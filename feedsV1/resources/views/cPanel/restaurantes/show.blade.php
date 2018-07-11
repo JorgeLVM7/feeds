@@ -3,7 +3,19 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h1>Vista previa </h1>
+            <div class="col-9">
+                <h1>Vista previa </h1>
+
+            </div>
+            <div class="col-3">
+                <div class="btn-group" role="group">
+                    <a class="btn btn-warning float-right" href="{{route('restaurantes.edit',$restaurante->id)}}">Editar</a>
+
+                    <a class="btn btn-danger float-right" href="{{route('restaurantes.index')}}">Cancelar</a>
+
+
+                </div>
+            </div>
         </div>
 
         <div class="row">
