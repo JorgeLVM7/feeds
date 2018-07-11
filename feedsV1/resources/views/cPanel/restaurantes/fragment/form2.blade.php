@@ -167,9 +167,11 @@
     </div>
 </div>
 
-<input type="hidden" name="latitud" id="lat" value="0">
+{!! Form::label('latitud','latitud ') !!}
+{!! Form::text('latitud', null,['class'=>'form-control', 'id'=>'lat']) !!}
 
-<input type="hidden" name="longitud" id="lng" value="0">
+{!! Form::label('longitud','longitud ') !!}
+{!! Form::text('longitud', null,['class'=>'form-control', 'id'=>'lng']) !!}
 
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}

@@ -1,9 +1,11 @@
 //google.maps.event.addDomListener(window, 'load', function(){
     $( document ).ready(function() {
-    console.log("Ready");
+    console.log("Ready!!");
     var map;
     var lat = $('#lat').val();
+    console.log("lat => ", lat);
     var lng = $('#lng').val();
+    console.log("lng => ", lng);
     function initMap() {
 
       if (lat === "" && lng === "") {
