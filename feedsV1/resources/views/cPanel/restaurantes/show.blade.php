@@ -13,7 +13,6 @@
 
                     <a class="btn btn-danger float-right" href="{{route('restaurantes.index')}}">Cancelar</a>
 
-
                 </div>
             </div>
         </div>
