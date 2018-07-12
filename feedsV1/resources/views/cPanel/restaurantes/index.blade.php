@@ -23,7 +23,7 @@
                     <div class="row d-flex justify-content-around">
                         <div class="card-deck col-12">
                             @foreach($restaurantes as $restaurante)
-                                <div class="col-2">
+                                <div class="col-md-3">
                                     <div class="card" style="width: 100%;">
                                         <img class="card-img-top" src="/images/{{$restaurante->path}}" alt="Card image cap">
                                         <div class="card-body">
@@ -36,15 +36,20 @@
                                             <li class="list-group-item">{{ $restaurante ->telefono }}</li>
                                         </ul>
                                         <div class="card-body align-center">
-                                            <a href="{{ route('restaurantes.show', $restaurante->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
 
-                                            <a href="{{ route('restaurantes.edit', $restaurante->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+                                            {{--<div class="btn-group" role="group">--}}
 
-                                            <form class="btn-group btn-group-toggle" action="{{ route('restaurantes.destroy', $restaurante->id)}}" method="POST">
-                                                {{ csrf_field() }}
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button>
-                                            </form>
+                                                <a href="{{ route('restaurantes.show', $restaurante->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
+
+                                                <a href="{{ route('restaurantes.edit', $restaurante->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+
+                                                <form class="btn-group btn-group-toggle" action="{{ route('restaurantes.destroy', $restaurante->id)}}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button>
+                                                </form>
+
+                                            {{--</div>--}}
                                         </div>
                                     </div>
                                 </div>
