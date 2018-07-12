@@ -123,17 +123,17 @@
 
     <div class="col-md-5">
 
-        <div class="form-group">
+       <div class="form-group">
             <label for="horario">Horario</label>
             <select class="form-control select2" name="horario[]" id="horario" multiple="multiple" style="width: 100%">
-                <option value="Lu">Lunes</option>
-                <option value="Ma">Martes</option>
-                <option value="Mi">Miércoles</option>
-                <option value="Ju">Jueves</option>
-                <option value="Vi">Vienes</option>
-                <option value="Sa">Sábado</option>
-                <option value="Do">Domingo</option>
-            </select>
+                <option value="LU">Lunes</option>
+                <option value="MA">Martes</option>
+                <option value="MI">Miércoles</option>
+                <option value="JU">Jueves</option>
+                <option value="VI">Viernes</option>
+                <option value="SA">Sábado</option>
+                <option value="DO">Domingo</option>
+            </select>        
         </div>
     </div>
     <div class="col-md-3">
@@ -162,16 +162,17 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
+            <input id="autocomplete" type="text" placeholder="Introduce una dirección" style="width: 100%; height:40px; border-radius:5px; border-color:gray;"><br>
             <div id="map" style="widows: 100%; height:500px;"></div>
         </div>
     </div>
 </div>
 
-{!! Form::label('latitud','latitud ') !!}
-{!! Form::text('latitud', null,['class'=>'form-control', 'id'=>'lat']) !!}
+<!--{!! Form::label('latitud','latitud ') !!}-->
+{!! Form::hidden('latitud', null,['class'=>'form-control', 'id'=>'lat']) !!}
 
-{!! Form::label('longitud','longitud ') !!}
-{!! Form::text('longitud', null,['class'=>'form-control', 'id'=>'lng']) !!}
+<!--{!! Form::label('longitud','longitud ') !!}-->
+{!! Form::hidden('longitud', null,['class'=>'form-control', 'id'=>'lng']) !!}
 
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}

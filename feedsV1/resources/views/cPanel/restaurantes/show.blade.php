@@ -70,7 +70,8 @@
                     </div>
                     <div class="col-6">
                         <label for="">Horario</label>
-                        <h6>{{$restaurante->horario }}</h6>
+                        <h6>{{$restaurante->horario }}
+                            {{$restaurante->hora1}} - {{$restaurante->hora2}}</h6>
                     </div>
                 </div>
 

@@ -35,8 +35,8 @@
         </div>
     </div>
 
-    
 @endsection
+
 @section('script')
   <!--JS de horario-inicio y final de restaurante -->
   <script>

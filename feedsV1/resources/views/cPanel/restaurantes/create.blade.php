@@ -57,7 +57,7 @@
     <script>
         $(document).ready(function() {
             $('.select2').select2();
-        });
+        }); 
     </script>
     <script src="{{asset('/js/mapa.js')}}"></script>
 @endsection
