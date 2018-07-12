@@ -159,6 +159,7 @@
 <div class="row c_black">
     <div class="col-md-12">
         <div class="form-group">
+            <input id="autocomplete" type="text" placeholder="Introduce una dirección">
             <div id="map" style="widows: 100%; height:500px;"></div>
         </div>
     </div>

@@ -34,3 +34,27 @@
         </div>
     </div>
 @endsection
+@section('script')
+<!--JS de Fecha de evento-->
+<script>
+    $('#datepicker').datepicker({
+        locale: 'es-es',
+        uiLibrary: 'bootstrap4'
+    });
+</script>
+
+<!--JS de horario-inicio de evento -->
+<script>
+    $('#time_in').timepicker({
+        locale: 'es-es',
+        uiLibrary: 'bootstrap4'
+    });
+</script>
+<!--JS de horario-final de evento -->
+<script>
+    $('#time_out').timepicker({
+        locale: 'es-es',
+        uiLibrary: 'bootstrap4'
+    });
+</script>
+@endsection

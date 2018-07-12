@@ -1,6 +1,5 @@
-//google.maps.event.addDomListener(window, 'load', function(){
-    $( document ).ready(function() {
-    console.log("Ready!!");
+$( document ).ready(function() {
+    console.log("Go!!");
     var map;
     var lat = $('#lat').val();
     console.log("lat => ", lat);
@@ -49,22 +48,21 @@
         var marker = new google.maps.Marker({
             position: latlng,
             map: map,
-            draggable: true,
+            //draggable: true,
             icon: img,
-            title: "Arrastrame!",
+            //title: "Arrastrame!",
             animation: google.maps.Animation.DROP,
         });
 
-        var contentid = "Guardar la ubicación actual, " +"<br>" +
-            "o arrastre el marcador para mayor precisión" + "<br>"
+        /*var contentid = ""; 
         var information =  new google.maps.InfoWindow({
             content: contentid
-        })
+        }) 
 
         marker.addListener('click', function() {
             information.open(map, marker);
-        })
-        information.open(map,marker);
+        }) 
+        information.open(map,marker); */
         // agrega a los inputs la ubucacion actual
         $('#lat').val((lat));
         $('#lng').val((lng));
@@ -73,9 +71,9 @@
             getMarkerCoords(marker);
         });
         // usa el autocompletado de google maps obteniendo el valor del input
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')))
-        autocomplete.bindTo('bounds', map);
-         
+        //autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')))
+        //autocomplete.bindTo('bounds', map);
+        /* 
         autocomplete.addListener('place_changed', function() {
           // ocultar el marcador
           marker.setVisible(false)
@@ -95,7 +93,7 @@
           marker.setVisible(true);
           $('#lat').val(place.geometry.location.lat());
           $('#lng').val(place.geometry.location.lng());
-      })
+      }) */
       }
 
       function getMarkerCoords(marker){
@@ -110,4 +108,3 @@
     // Inicio
     initMap()
 });
-

@@ -85,9 +85,26 @@
         <div class="row">
             <div class="col-12">
                 <label for=""> Ubicación: </label>
-
+                <div class="row c_black">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div id="map" style="widows: 100%; height:500px;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div>
+            
+            <input type="hidden" name="lat" id="lat" value="{{$restaurante->latitud}}">
+
+            <input type="hidden" name="lng" id="lng" value="{{$restaurante->longitud}}">
         </div>
 
     </div>
+
+    
+@endsection
+@section('script')
+    <script src="{{asset('/js/viewmap.js')}}"></script>
 @endsection

@@ -34,4 +34,30 @@
             </div>
         </div>
     </div>
+
+    
+@endsection
+@section('script')
+  <!--JS de horario-inicio y final de restaurante -->
+  <script>
+        $('#timepicker1').timepicker({
+            locale: 'es-es',
+            uiLibrary: 'bootstrap4'
+        });
+        $('#timepicker2').timepicker({
+            locale: 'es-es',
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#horario').multiselect();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
+    </script>
+    <script src="{{asset('/js/mapa.js')}}"></script>
 @endsection
