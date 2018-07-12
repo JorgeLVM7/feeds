@@ -22,14 +22,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-
-        $promociones = Promocion::orderBy('id', 'DESC')->paginate();
-
-        $eventos = Evento::orderBy('id', 'DESC')->paginate();
-
-
-        return view('cPanel.products.index',compact('promociones','eventos'));
-    }
+//    public function index()
+//    {
+//
+//        $promociones = Promocion::orderBy('id', 'DESC')->paginate();
+//
+//        $eventos = Evento::orderBy('id', 'DESC')->paginate();
+//        $restaurantes = Evento::orderBy('id', 'DESC')->paginate();
+//
+//
+//        return view('cPanel.restaurantes.index',compact('promociones','eventos', 'restaurantes'));
+//    }
 }

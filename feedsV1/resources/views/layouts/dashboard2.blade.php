@@ -31,7 +31,7 @@
                 <a class="nav-link text-white" href="{{ route('promocion.index') }}">Promociones <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Eventos <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-white" href="{{ route('evento.index') }}">Eventos <span class="sr-only">(current)</span></a>
             </li>
         </ul>
 

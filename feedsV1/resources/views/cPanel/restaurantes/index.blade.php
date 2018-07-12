@@ -35,7 +35,7 @@
                                             <li class="list-group-item">{{ $restaurante ->email}}</li>
                                             <li class="list-group-item">{{ $restaurante ->telefono }}</li>
                                         </ul>
-                                        <div class="card-body align-center">
+                                        <div class="card-body">
 
                                             {{--<div class="btn-group" role="group">--}}
 
