@@ -10,15 +10,20 @@ use App\Http\Requests\RestaurantesRequest;
 
 class RestauranteController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+//        if(!$request->ajax()) return redirect('/restaurantes');
+
         $restaurantes = Restaurantes::orderBy('id','DESC')
         ->paginate();
 
         return view('cPanel.restaurantes.index',compact('restaurantes'));
     }
-    public function show($id)
+    public function show(Request $request, $id)
     {
+//        if(!$request->ajax()) return redirect('/');
+
+
         $restaurante = Restaurantes::find($id);
         return view('cPanel.restaurantes.show', compact('restaurante'));
     }

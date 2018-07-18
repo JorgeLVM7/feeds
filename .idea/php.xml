@@ -63,6 +63,14 @@
       <path value="$PROJECT_DIR$/feedsV1/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/feedsV1/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/feedsV1/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/select2/src" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/select2/dist" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/select2/.github" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/select2/tests" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/select2/docs" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/select2/vendor" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/feedsV1/vendor/laravelcollective/html" />
     </include_path>
   </component>
   <component name="PhpUnit">

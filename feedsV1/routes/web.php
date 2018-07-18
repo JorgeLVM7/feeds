@@ -27,8 +27,14 @@ Route::post('complete/{id}', 'UserController@complete');
 
 Route::resource('products', 'ProductsController');
 
-Route::resource('restaurantes','RestauranteController');
 
-Route::resource('promocion','PromocionController');
+Route::group(['middleware'=>'auth'],function() {
+    Route::resource('restaurantes','RestauranteController');
 
-Route::resource('evento','EventoController');
+    Route::resource('promocion','PromocionController');
+
+    Route::resource('evento','EventoController');
+    });
+
+
+//Route::group('layouts','')
