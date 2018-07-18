@@ -32,3 +32,7 @@ Route::resource('restaurantes','RestauranteController');
 Route::resource('promocion','PromocionController');
 
 Route::resource('evento','EventoController');
+
+//Route::resource('layouts.mapa');
+
+Route::resource('layouts','MapaController@index')->name('layouts.mapa');

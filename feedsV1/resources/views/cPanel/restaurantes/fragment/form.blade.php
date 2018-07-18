@@ -25,8 +25,8 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria1','Categoría 1:  ') !!}
-            <select name="idcategoria1" class="form-control">
-            <option value="">Selecciona tu categoria</option>
+            <select name="idcategoria1" class="form-control selectC">
+                <option></option>
                 @foreach ($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{$categoria->categoria}}</option>
                 @endforeach
@@ -39,8 +39,8 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria2','Categoría 2: ') !!}
-            <select name="idcategoria2" class="form-control">
-            <option value="">Selecciona tu categoria</option>
+            <select name="idcategoria2" class="form-control selectC">
+                <option></option>
                 @foreach ($categorias as $cat)
                         <option value="{{ $cat->id }}">{{$cat->categoria}}</option>
                 @endforeach
@@ -51,7 +51,7 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('categoria','Categoría 3: ') !!}
-            <select name="idcategoria3" class="form-control">
+            <select name="idcategoria3" class="form-control selectC">
             <option value="">Selecciona tu categoria</option>
                 @foreach ($categorias as $ctg)
                         <option value="{{ $ctg->id }}">{{$ctg->categoria}}</option>
@@ -159,7 +159,7 @@
 <div class="row c_black">
     <div class="col-md-12">
         <div class="form-group">
-            <input id="autocomplete" type="text" placeholder="Introduce una dirección" style="width: 100%; height:40px; border-radius:5px; border-color:gray;">
+            <input id="autocomplete" type="text" placeholder=" Introduce una dirección" style="width: 100%; height:40px; border-radius:5px; border-color:gray;">
             <div id="map" style="widows: 100%; height:500px;"></div>
         </div>
     </div>

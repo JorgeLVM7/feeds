@@ -39,7 +39,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <label for="">Descripción: </label>
+                        <label for="">Dirección: </label>
 
                         <h6>Calle {{$restaurante->calle}}, 
                             {{$restaurante->no_int}}
