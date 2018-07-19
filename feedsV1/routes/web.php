@@ -31,18 +31,10 @@ Route::resource('products', 'ProductsController');
 Route::group(['middleware'=>'auth'],function() {
     Route::resource('restaurantes','RestauranteController');
 
-<<<<<<< HEAD
     Route::resource('promocion','PromocionController');
 
     Route::resource('evento','EventoController');
     });
 
 
-//Route::group('layouts','')
-=======
-Route::resource('evento','EventoController');
-
-//Route::resource('layouts.mapa');
-
-Route::resource('layouts','MapaController@index')->name('layouts.mapa');
->>>>>>> ec8631c7f63d91e2818b74e46af60262b61269a4
+Route::resource('layouts', 'MapaController');
