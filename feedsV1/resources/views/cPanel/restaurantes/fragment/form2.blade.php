@@ -25,8 +25,8 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria1','Categoría 1:  ') !!}
-            <select name="idcategoria1" class="form-control">
-                <option value="">Selecciona tu categoria</option>
+            <select name="idcategoria1" class="form-control selectE">
+                <option></option>
                 @foreach ($categorias as $categoria)
                     <option value="{{ $categoria->id }}">{{$categoria->categoria}}</option>
                 @endforeach
@@ -39,8 +39,8 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria2','Categoría 2: ') !!}
-            <select name="idcategoria2" class="form-control">
-                <option value="">Selecciona tu categoria</option>
+            <select name="idcategoria2" class="form-control selectE">
+                <option></option>
                 @foreach ($categorias as $cat)
                     <option value="{{ $cat->id }}">{{$cat->categoria}}</option>
                 @endforeach
@@ -51,8 +51,8 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('categoria','Categoría 3: ') !!}
-            <select name="idcategoria3" class="form-control">
-                <option value="">Selecciona tu categoria</option>
+            <select name="idcategoria3" class="form-control selectE">
+                <option></option>
                 @foreach ($categorias as $ctg)
                     <option value="{{ $ctg->id }}">{{$ctg->categoria}}</option>
                 @endforeach
@@ -116,7 +116,6 @@
     <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('RFC','RFC: ') !!}
-
             {!! Form::text('RFC', null,['class'=>'form-control']) !!}
         </div>
     </div>
@@ -126,26 +125,28 @@
        <div class="form-group">
             <label for="horario">Horario</label>
             <select class="form-control select2" name="horario[]" id="horario" multiple="multiple" style="width: 100%">
-                <option value="LU">Lunes</option>
-                <option value="MA">Martes</option>
-                <option value="MI">Miércoles</option>
-                <option value="JU">Jueves</option>
-                <option value="VI">Viernes</option>
-                <option value="SA">Sábado</option>
-                <option value="DO">Domingo</option>
+                <option value="L">Lunes</option>
+                <option value="Ma">Martes</option>
+                <option value="Mi">Miércoles</option>
+                <option value="J">Jueves</option>
+                <option value="V">Viernes</option>
+                <option value="S">Sábado</option>
+                <option value="D">Domingo</option>
             </select>        
         </div>
     </div>
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('hora1','hora de apertura:') !!}
-            <input name="hora1" id="timepicker1" width="260" />
+            {!! Form::text('hora1', null,['id'=>'timepicker1', 'width'=>"260"]) !!}
+            <!--<input name="hora1" id="timepicker1" width="260" />-->
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('hora2','hora de clausura:') !!}
-            <input name="hora2" id="timepicker2" width="260" />
+            {!! Form::text('hora2', null,['id'=>'timepicker2', 'width'=>"260"]) !!}
+            <!--<input name="hora2" id="timepicker2" width="260" />-->
         </div>
     </div>
 </div>
@@ -162,7 +163,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            <input id="autocomplete" type="text" placeholder="Introduce una dirección" style="width: 100%; height:40px; border-radius:5px; border-color:gray;"><br>
+            <input id="autocomplete" type="text" placeholder=" Introduce una dirección" style="width: 100%; height:40px; border-radius:5px; border-color:gray;"><br>
             <div id="map" style="widows: 100%; height:500px;"></div>
         </div>
     </div>

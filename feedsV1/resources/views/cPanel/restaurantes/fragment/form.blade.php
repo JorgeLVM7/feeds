@@ -113,7 +113,6 @@
     <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('RFC','RFC: ') !!}
-
             {!! Form::text('RFC', null,['class'=>'form-control']) !!}
         </div>
     </div>
@@ -123,13 +122,13 @@
         <div class="form-group">
             <label for="horario">Horario</label>
             <select class="form-control select2" name="horario[]" id="horario" multiple="multiple" style="width: 100%">
-                <option value="LU">Lunes</option>
-                <option value="MA">Martes</option>
-                <option value="MI">Miércoles</option>
-                <option value="JU">Jueves</option>
-                <option value="VI">Viernes</option>
-                <option value="SA">Sábado</option>
-                <option value="DO">Domingo</option>
+                <option value="L">Lunes</option>
+                <option value="Ma">Martes</option>
+                <option value="Mi">Miércoles</option>
+                <option value="J">Jueves</option>
+                <option value="V">Viernes</option>
+                <option value="S">Sábado</option>
+                <option value="D">Domingo</option>
             </select>        
         </div>
     </div>

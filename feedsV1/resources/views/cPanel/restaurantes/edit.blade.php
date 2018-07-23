@@ -58,6 +58,13 @@
         $(document).ready(function() {
             $('.select2').select2();
         });
+
+        $(document).ready(function() {
+            $('.selectE').select2({
+                placeholder : "Busca tu categoría",
+                allowClear : true
+            });
+        }); 
     </script>
     <script src="{{asset('/js/mapa.js')}}"></script>
 @endsection

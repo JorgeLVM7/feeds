@@ -16,20 +16,23 @@
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('fecha','Fecha: ') !!}
-            <input name="fecha" id="fecha" width="276" />
+            {!! Form::text('fecha', null,['id'=>'fecha', 'width'=>"276"]) !!}
+            <!--<input name="fecha" id="fecha" width="276" />-->
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('hora_inicio','Hora de inicio: ') !!}
-            <input name="hora_inicio" id="hora_inicio" width="270" />
+            {!! Form::text('hora_inicio', null,['id'=>'hora_inicio', 'width'=>"270"]) !!}
+            <!--<input name="hora_inicio" id="hora_inicio" width="270" />-->
         </div>
     </div>
 
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('hora_final','Hora final: ') !!}
-            <input name="hora_final" id="hora_final" width="270" />
+            {!! Form::text('hora_inicio', null,['id'=>'hora_final', 'width'=>"270"]) !!}
+            <!--<input name="hora_final" id="hora_final" width="270" />-->
         </div>
     </div>
 </div>
