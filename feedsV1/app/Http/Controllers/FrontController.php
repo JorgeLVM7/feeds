@@ -11,15 +11,15 @@ class FrontController extends Controller
     public function index()
     {
 //        Restaurantes
-        $restaurantes = Restaurantes::orderBy('id','DESC')->paginate(25);
+        $restaurantes = Restaurantes::orderBy('id','DESC')->paginate(4);
 
 //        Promociones
-        $promociones = Restaurantes::orderBy('id','DESC')->paginate(25);
+        $promociones = Promocion::orderBy('id','DESC')->paginate(4);
 
 //        Eventos
         $eventos = Restaurantes::orderBy('id','DESC')->paginate(25);
 
-        return view('index',compact('restaurantes','promociones', 'eventos'));
+        return view('welcome',compact('restaurantes','promociones', 'eventos'));
 
     }
 

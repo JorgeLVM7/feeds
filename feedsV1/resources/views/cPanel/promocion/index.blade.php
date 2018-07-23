@@ -9,7 +9,7 @@
                     <h1 class="c_white">Promoción</h1>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-light float-right" href="{{route('promocion.create')}}">Nuevo</a>
+                    <a class="btn btn-dark float-right" href="{{route('promocion.create')}}">Nuevo</a>
                 </div>
             </div>
             @include('cPanel.promocion.fragment.info')
@@ -40,7 +40,7 @@
                                         <form class="btn-group btn-group-toggle" action="{{ route('promocion.destroy', $promo->id)}}" method="POST">
                                             {{ csrf_field() }}
                                             <input type="hidden" name="_method" value="DELETE">
-                                            <button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button>
+                                            <button class="btn btn-outline-danger" onclick="return confirm('¿Estas seguro que quieres eliminar esta promoción ?')" style="cursor: pointer;" type="submit">Borrar</button>
                                         </form>
                                     </div>
                                 </div>

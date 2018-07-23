@@ -54,123 +54,66 @@
         <div class="col-12">
             <h2>Restaurantes</h2>
         </div>
-
-{{--        @foreach($restaurantes as $restaurante)--}}
-            <div class="col-sm-4 caja">
-                <div class="card c-caja" style="width: 18rem;">
-                    <img class="card-img-top" src="img/promo1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-
-            {{--@endforeach--}}
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/promo1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/promo2.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/promo3.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/promo4.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/promo4.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/promo4.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <hr>
     </div>
     <div class="row">
         <div class="col-12">
-            <h2>Eventos</h2>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/evento1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="row d-flex justify-content-around">
+                <div class="card-deck col-12">
+                    @foreach($restaurantes as $restaurante)
+                            <div class="col-sm-3 caja">
+                                <a href="" style="text-decoration: none; color: #1C1C1C">
+                                    <div class="card" style="width: 100%;">
+                                        <img class="card-img-top" src="/images/{{$restaurante->path}}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ $restaurante ->nombre }}</h5>
+                                            <p class="card-text">{{ $restaurante ->descripcion }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    @endforeach
+
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/evento2.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/evento3.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/evento4.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/evento4.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 caja">
-            <div class="card c-caja" style="width: 18rem;">
-                <img class="card-img-top" src="img/evento4.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
+            {!! $restaurantes->render() !!}
+
         </div>
     </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-12">
+            <h2>Promociones</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row d-flex justify-content-around">
+                <div class="card-deck col-12">
+                    @foreach($promociones as $promocion)
+                        <div class="col-sm-3 caja">
+                            <a href="" style="text-decoration: none; color: #1C1C1C">
+                                <div class="card" style="width: 100%;">
+                                    <img class="card-img-top" src="/images/{{$promocion->path}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $promocion ->nombre }}</h5>
+                                        <p class="card-text">{{ $promocion ->descripcion }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+            {!! $promociones->render() !!}
+
+        </div>
+    </div>
+
+
+
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

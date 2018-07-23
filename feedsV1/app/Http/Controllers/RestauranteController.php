@@ -106,9 +106,11 @@ class RestauranteController extends Controller
         return redirect()-> route('restaurantes.index')
             ->with('info','El restaurante fue actualizado correctamente');
     }
-    public function destroy()
+    public function destroy($id)
     {
-        # code...
+        $promocion = Restaurantes::find($id);
+        $promocion ->delete();
+        return back()->with('info','El restaurante fue eliminado correctamente');
     }
     public function edit($id)
     {

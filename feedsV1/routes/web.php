@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Auth::routes();
+
+Route::get('/','FrontController@index')->name('index');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -35,6 +37,8 @@ Route::group(['middleware'=>'auth'],function() {
 
     Route::resource('evento','EventoController');
     });
+Auth::routes();
+
 
 
 Route::resource('layouts', 'MapaController');

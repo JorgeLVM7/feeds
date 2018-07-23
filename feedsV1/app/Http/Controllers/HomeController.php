@@ -28,6 +28,7 @@ class HomeController extends Controller
         $promociones = Promocion::orderBy('id', 'DESC')->paginate();
 
         $eventos = Evento::orderBy('id', 'DESC')->paginate();
+
         $restaurantes = Evento::orderBy('id', 'DESC')->paginate();
 
 

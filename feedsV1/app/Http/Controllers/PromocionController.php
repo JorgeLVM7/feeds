@@ -51,11 +51,11 @@ class PromocionController extends Controller
         return redirect()-> route('promocion.index')
         ->with('info','La promocion fue actualizada correctamente');
     }
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        $promocion = Promocion::find($id);
+        $promocion = Promocion::findOrFail($request->id);
         $promocion ->delete();
-        return back()->with('info','La promoción fue eliminado correctamente');
+        return back()->with('info','La promoción fue eliminada correctamente');
     }
     public function edit($id)
     {
