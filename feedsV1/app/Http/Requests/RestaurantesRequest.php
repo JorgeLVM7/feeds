@@ -28,6 +28,8 @@ class RestaurantesRequest extends FormRequest
             'descripcion'=> 'required',
             'sitio_web'=> 'required',
             'idcategoria1' => 'required',
+            'idcategoria2' => 'nullable',
+            'idcategoria3' => 'nullable',
             'email' => 'required',
             'calle' => 'required',
             'no_int' => 'required',

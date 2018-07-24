@@ -58,7 +58,7 @@ class RestauranteController extends Controller
         $restaurante->latitud = $request->latitud;
         $restaurante->longitud = $request->longitud;
         $restaurante->path = $request->path;
-        $restaurante->users_id_user = '1';
+        $restaurante->user_id = $request->user_id;
         $restaurante->save();
         return redirect()-> route('restaurantes.index')
         ->with('info','El restaurante fue guardado correctamente');
@@ -99,7 +99,7 @@ class RestauranteController extends Controller
         $restaurante->latitud = $request->latitud;
         $restaurante->longitud = $request->longitud;
         $restaurante->path = $request->path;
-        $restaurante->users_id_user = '1';
+        $restaurante->user_id = $request->user_id;
 
 
         $restaurante->save();
