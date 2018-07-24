@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRestaurantesTable extends Migration
+class AddColumnUserIdToRestaurantes extends Migration
 {
     /**
      * Run the migrations.
@@ -14,6 +14,8 @@ class CreateRestaurantesTable extends Migration
     public function up()
     {
         Schema::create('restaurantes', function (Blueprint $table) {
+
+
 
             $table->increments('id');
             $table->string('nombre');
@@ -36,11 +38,19 @@ class CreateRestaurantesTable extends Migration
             $table->string('RFC');
             $table->string('path')->nullable();
 
+            $table->integer('user_id')->unsigned();
 
+            //Relation
+
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
+
         });
+
     }
+
+
 
     /**
      * Reverse the migrations.
@@ -50,5 +60,6 @@ class CreateRestaurantesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('restaurantes');
+
     }
 }

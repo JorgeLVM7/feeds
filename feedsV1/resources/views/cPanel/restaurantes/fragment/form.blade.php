@@ -168,7 +168,6 @@
 
 <input type="hidden" name="longitud" id="lng" value="">
 
-
 {{ Form::hidden('user_id',auth()->user()->id ) }}
 
 <div class="form-group">
