@@ -132,7 +132,7 @@
                 <option value="V">Viernes</option>
                 <option value="S">Sábado</option>
                 <option value="D">Domingo</option>
-            </select>        
+            </select>
         </div>
     </div>
     <div class="col-md-3">

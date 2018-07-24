@@ -37,13 +37,10 @@
 
                                         <a href="{{ route('promocion.edit', $promo->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
 
-                                        <form class="btn-group btn-group-toggle" action="{{ route('promocion.destroy', $promo->id)}}" method="POST">
-                                            {{ csrf_field() }}
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <button class="btn btn-outline-danger" onclick="return confirm('¿Estas seguro que quieres eliminar esta promoción ?')" style="cursor: pointer;" type="submit">Borrar</button>
-                                        </form>
+                                        <a href="" data-target="#modal-delete-{{$promo->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
                                     </div>
                                 </div>
+                            @include('cPanel.promocion.modal')
                             @endforeach
                             {!! $promocion->render() !!}
                         </div>

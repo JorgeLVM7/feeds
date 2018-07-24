@@ -13,6 +13,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="88x88" href="img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
     <style type="text/css">
     	#mymap {
       		border:1px solid gray;
@@ -20,7 +22,7 @@
       		height: 500px;
     	}
   	</style>
-    <title>Feeds</title>
+    <title>Feeds | Mapa </title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg menu fixed-top" >

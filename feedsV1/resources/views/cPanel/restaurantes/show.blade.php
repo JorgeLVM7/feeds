@@ -45,7 +45,7 @@
                             {{$restaurante->no_int}}
                             {{$restaurante->no_ext}}
                             Col. {{$restaurante->colonia}},
-                            Entre {{$restaurante->referencia }}</h6>
+                            {{$restaurante->referencia }}</h6>
                     </div>
                 </div>
                 <div class="row">

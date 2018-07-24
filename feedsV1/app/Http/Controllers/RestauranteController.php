@@ -108,8 +108,8 @@ class RestauranteController extends Controller
     }
     public function destroy($id)
     {
-        $promocion = Restaurantes::find($id);
-        $promocion ->delete();
+        $restaurante = Restaurantes::find($id);
+        $restaurante ->delete();
         return back()->with('info','El restaurante fue eliminado correctamente');
     }
     public function edit($id)

@@ -6,14 +6,14 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-10">
-                    <h1 class="c_white">Evento</h1>
+                    <h1 class="c_black">Evento</h1>
                 </div>
                 <div class="col-2">
                     <a class="btn btn-light float-right" href="{{route('evento.create')}}">Nuevo</a>
                 </div>
             </div>
             @include('cPanel.evento.fragment.info')
-            <table class="table table-hover c_white ">
+            <table class="table table-hover c_black">
                 <thead>
                 <tr>
                     <th>Nombre</th>
@@ -38,14 +38,11 @@
 
                                 <a href="{{ route('evento.edit', $ev->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
 
-                                <form class="btn-group btn-group-toggle" action="{{ route('evento.destroy', $ev->id)}}" method="POST">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button>
-                                </form>
+                                <a href="" data-target="#modal-delete-{{$ev->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
                             </div>
                         </td>
-                    </tr>
+                    </tr>              
+                @include('cPanel.evento.modal')
                 @endforeach
                 </tbody>
             </table>
