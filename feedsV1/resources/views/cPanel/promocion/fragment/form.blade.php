@@ -31,7 +31,7 @@
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('hora_final','Hora final: ') !!}
-            {!! Form::text('hora_inicio', null,['id'=>'hora_final', 'width'=>"270"]) !!}
+            {!! Form::text('hora_final', null,['id'=>'hora_final', 'width'=>"270"]) !!}
             <!--<input name="hora_final" id="hora_final" width="270" />-->
         </div>
     </div>
