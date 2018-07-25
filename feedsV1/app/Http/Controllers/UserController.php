@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -55,6 +55,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->password = bcrypt($request->password);
+        $user->path = $request->path;
         $user->active = 1;
         $user->save();
         return redirect::to('/login');

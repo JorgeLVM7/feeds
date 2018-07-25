@@ -24,19 +24,19 @@ class RestaurantesRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=> 'required',
+            'nombre'=> 'required|alpha_num',
             'descripcion'=> 'required',
             'sitio_web'=> 'required',
             'idcategoria1' => 'required',
             'idcategoria2' => 'nullable',
             'idcategoria3' => 'nullable',
-            'email' => 'required',
+            'email' => 'required|email',
             'calle' => 'required',
-            'no_int' => 'required',
-            'no_ext' => 'required',
             'colonia' => 'required',
             'codigo_postal' => 'required',
             'telefono' => 'numeric|required|min:5|max:9999999999',
+            'RFC' => 'alpha_num',
+            'horario' => 'required',
             'hora1' => 'date_format:"H:i"|required',
             'hora2' => 'date_format:"H:i"|required',
         ];
@@ -51,13 +51,12 @@ class RestaurantesRequest extends FormRequest
             'idcategoria1.required' =>'El campo Categoría 1 es obligatorio',
             'email.required'        =>'El campo Correo Electrónico es obligatorio',
             'calle.required'        =>'El campo Calle es obligatorio',
-            'no_int.required'       =>'El campo Número interior es obligatorio',
-            'no_ext.required'       =>'El campo Número exterior es obligatorio',
             'colonia.required'      =>'El campo Colonia es obligatorio',
             'codigo_postal.required'=>'El campo Código Postal es obligatorio',
             'telefono.required'     =>'El campo Teléfono es obligatorio',
-            'hora1.required'        =>'El campo hora de apertura es obligatorio',
-            'hora2.required'        =>'El campo hora de clausura es obligatorio',
+            'horario.required'      =>'El campo Horario es obligatorio',
+            'hora1.required'        =>'El campo Hora de apertura es obligatorio',
+            'hora2.required'        =>'El campo Hora de clausura es obligatorio',
         ];
     }
 }

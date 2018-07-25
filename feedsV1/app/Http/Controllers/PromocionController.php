@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Promocion;
 use Illuminate\Http\Request;
 use App\Http\Requests\PromocionRequest;
+use Auth;
 
 
 
@@ -11,7 +12,9 @@ class PromocionController extends Controller
 {
     public function index()
     {
-        $promocion = Promocion::orderBy('id','DESC')->paginate();
+        $promocion = Promocion::orderBy('id','DESC')
+            ->where('user_id', auth()->user()->id)
+            ->paginate();
 
         return view('cPanel.promocion.index',compact('promocion'));
     }
@@ -29,6 +32,7 @@ class PromocionController extends Controller
         $promocion->hora_inicio = $request->hora_inicio;
         $promocion->hora_final = $request->hora_final;
         $promocion->path = $request->path;
+        $promocion->user_id = $request->user_id;
         $promocion->save();
         return redirect()-> route('promocion.index')
         ->with('info','La promocion fue guardado correctamente');
@@ -47,6 +51,7 @@ class PromocionController extends Controller
         $promocion->hora_inicio = $request->hora_inicio;
         $promocion->hora_final = $request->hora_final;
         $promocion->path = $request->path;
+        $promocion->user_id = $request->user_id;
         $promocion->save();
         return redirect()-> route('promocion.index')
         ->with('info','La promocion fue actualizada correctamente');

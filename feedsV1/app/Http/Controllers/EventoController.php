@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Evento;
 use Illuminate\Http\Request;
 use App\Http\Requests\EventoRequest;
+use Auth;
 
 class EventoController extends Controller
 {
     public function index()
     {
       $evento = Evento::orderBy('id','DESC')
-      ->paginate();
+        ->where('user_id', auth()->user()->id)
+        ->paginate();
 
       return view('cPanel.evento.index',compact('evento'));
     }
@@ -29,6 +31,7 @@ class EventoController extends Controller
         $evento->hora_inicio = $request->hora_inicio;
         $evento->hora_final = $request->hora_final;
         $evento->path = $request->path;
+        $evento->user_id = $request->user_id;
         $evento->save();
         return redirect()-> route('evento.index')
         ->with('info','El evento fue guardado correctamente');
@@ -47,6 +50,7 @@ class EventoController extends Controller
         $evento->hora_inicio = $request->hora_inicio;
         $evento->hora_final = $request->hora_final;
         $evento->path = $request->path;
+        $evento->user_id = $request->user_id;
         $evento->save();
 
         return redirect()-> route('cPanel.evento.index')

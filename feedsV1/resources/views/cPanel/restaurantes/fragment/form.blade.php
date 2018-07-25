@@ -113,7 +113,7 @@
     <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('RFC','RFC: ') !!}
-            {!! Form::text('RFC', null,['class'=>'form-control']) !!}
+            {!! Form::text('RFC', null,['class'=>'form-control', 'font style'=>'text-transform:uppercase;']) !!}
         </div>
     </div>
 

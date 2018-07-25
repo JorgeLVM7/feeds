@@ -24,7 +24,7 @@ class EventoRequest extends FormRequest
     public function rules()
     {
         return [
-        'nombre' => 'required',
+        'nombre' => 'required|alpha_num',
         'descripcion' => 'required',
         'fecha' => 'date|required',
         'hora_inicio' => 'date_format:"H:i"|required',

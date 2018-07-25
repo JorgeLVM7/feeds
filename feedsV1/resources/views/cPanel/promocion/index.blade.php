@@ -6,7 +6,8 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-10">
-                    <h1 class="c_white">Promoción</h1>
+                    <h1 class="c_black">Promoción</h1>
+                    <hr>
                 </div>
                 <div class="col-2">
                     <a class="btn btn-dark float-right" href="{{route('promocion.create')}}">Nuevo</a>
@@ -29,7 +30,7 @@
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">Fecha: {{ $promo ->fecha }}</li>
-                                        <li class="list-group-item">Hora Inicio:{{ $promo ->hora_inicio}}</li>
+                                        <li class="list-group-item">Hora Inicio: {{ $promo ->hora_inicio}}</li>
                                         <li class="list-group-item">Hora Final: {{ $promo ->hora_final }}</li>
                                     </ul>
                                     <div class="card-body">

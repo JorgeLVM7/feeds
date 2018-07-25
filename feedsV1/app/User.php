@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','code','active','avatar','roles_id_rol'
+        'name', 'email', 'password','code','active','path','roles_id_rol'
     ];
 
     /**
@@ -26,4 +27,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function setPathAttribute($path)
+    {
+        if(!empty($path)){
+            $this->attributes['path']= Carbon::now()->second.$path->getClientOriginalName();
+            $name = Carbon::now()->second.$path->getClientOriginalName();
+            \Storage::disk('local')->put($name, \File::get($path));
+        }
+
+    }
 }

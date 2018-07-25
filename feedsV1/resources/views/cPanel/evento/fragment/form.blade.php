@@ -47,6 +47,7 @@
     </div>
 </div>
 
+{{ Form::hidden('user_id',auth()->user()->id ) }}
 
 
 <br>

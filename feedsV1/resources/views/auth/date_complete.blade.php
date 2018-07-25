@@ -8,7 +8,7 @@
                 <div class="panel-heading title">Registro</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('/complete/'.$id) }}">
+                    <form class="form-horizontal" method="POST" action="{{ url('/complete/'.$id) }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -32,6 +32,12 @@
                                 <input id="password-confirm" type="password" class="form-control es" name="password_confirmation" minlength="8" maxlength="20" required pattern="[A-Za-z0-9]+">
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            {!! Form::label('path','Foto de perfil',['class'=>'col-md-4 control-label tx']) !!}     
+                            {!! Form::file('path',['class'=>'col-md-6 ex']) !!}
+                        </div>
+                        <br>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

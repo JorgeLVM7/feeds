@@ -10,7 +10,7 @@ class Promocion extends Model
     public $table = 'promocion';
     
     protected $fillable = [
-        'nombre', 'descripcion', 'fecha', 'hora_inico', 'hora_final', 'path'
+        'nombre', 'descripcion', 'fecha', 'hora_inico', 'hora_final', 'path', 'user_id'
     ];
 
     public function setPathAttribute($path)

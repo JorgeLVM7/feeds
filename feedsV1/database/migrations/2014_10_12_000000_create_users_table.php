@@ -18,10 +18,15 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();
-            $table->string('avatar')->default('img/default.jpg');
+            $table->string('path')->nullable();
             $table->string('code')->nullable();
             $table->integer('active')->default(0);
             $table->rememberToken();
+            $table->integer('roles_id_rol')->unsigned();
+
+            //Relation
+
+            $table->foreign('roles_id_rol')->references('id')->on('roles');
             $table->timestamps();
         });
     }

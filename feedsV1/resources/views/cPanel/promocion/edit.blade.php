@@ -11,7 +11,7 @@
                                  <h1 class="c_black">Editar promocion </h1>
                             </div>
                             <div class="col-2">
-                                 <a class="btn btn-light float-right" href="{{route('promocion.index')}}">Cancelar</a>
+                                 <a class="btn btn-danger float-right" href="{{route('promocion.index')}}">Cancelar</a>
                             </div>
                         </div>
                         <hr>

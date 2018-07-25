@@ -36,7 +36,9 @@ Route::group(['middleware'=>'auth'],function() {
     Route::resource('promocion','PromocionController');
 
     Route::resource('evento','EventoController');
-    });
+
+    Route::resource('config','ConfigController');
+});
 Auth::routes();
 
 
