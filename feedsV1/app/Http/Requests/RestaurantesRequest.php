@@ -36,7 +36,9 @@ class RestaurantesRequest extends FormRequest
             'no_ext' => 'required',
             'colonia' => 'required',
             'codigo_postal' => 'required',
-            'telefono' => 'required',
+            'telefono' => 'numeric|required|min:5|max:9999999999',
+            'hora1' => 'date_format:"H:i"|required',
+            'hora2' => 'date_format:"H:i"|required',
         ];
     }
 
@@ -54,6 +56,8 @@ class RestaurantesRequest extends FormRequest
             'colonia.required'      =>'El campo Colonia es obligatorio',
             'codigo_postal.required'=>'El campo Código Postal es obligatorio',
             'telefono.required'     =>'El campo Teléfono es obligatorio',
+            'hora1.required'        =>'El campo hora de apertura es obligatorio',
+            'hora2.required'        =>'El campo hora de clausura es obligatorio',
         ];
     }
 }
