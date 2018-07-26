@@ -19,7 +19,7 @@
         <div class="input-group mb-3">
             <div class="custom-file">
                 <input type="file" name="path" class="custom-file-input" maxlength="50" id="inputGroupFile02"/>
-                <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                <label class="custom-file-label" for="inputGroupFile02">Elige tu imagen...</label>
             </div>
         </div>
     </div>
