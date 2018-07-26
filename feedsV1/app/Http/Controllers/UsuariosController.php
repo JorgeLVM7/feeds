@@ -42,7 +42,6 @@ class UsuariosController extends Controller
 
         $usuarios->name = $request->name;
         $usuarios->email = $request->email;
-        $usuarios->password=bcrypt($request->password);
         $usuarios->path = $request->path;
         $usuarios->roles_id_rol = $request->roles_id_rol;
         $usuarios->save();

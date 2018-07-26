@@ -22,7 +22,7 @@
                                 {{--<div class="row">--}}
                                     {!! Form::model($usuarios, ['route'=>['usuarios.update',$usuarios->id], 'method'=> 'PUT','files'=>true]) !!}
 
-                                        @include('cPanel.usuarios.fragment.form')
+                                        @include('cPanel.usuarios.fragment.form2')
 
                                     {!! Form::close() !!}
                                  {{--</div>--}}

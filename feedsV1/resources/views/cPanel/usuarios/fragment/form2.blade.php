@@ -13,20 +13,6 @@
         </div>
     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            {!! Form::label('password','Contraseña') !!}
-            {!! Form::password('password',['class'=>'form-control']) !!}
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            {!! Form::label('password','Confirmar Contraseña') !!}
-            {!! Form::password('password_confirmation',['class'=>'form-control']) !!}
-        </div>
-    </div>
-    
-
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('roles_id_role','Role: ') !!}
