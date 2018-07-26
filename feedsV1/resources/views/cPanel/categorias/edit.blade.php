@@ -4,14 +4,14 @@
     <div class="container">
         <div class="col-12">
             <div class="row ">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
+                <div class="col-12">
+                    <div class="row">
                             <div class="col-10">
                                  <h1 class="c_black">Editar categoría </h1>
+                                 <hr>
                             </div>
                             <div class="col-2">
-                                 <a class="btn btn-danger float-right" href="{{route('categoria.index')}}">Cancelar</a>
+                                 <a class="btn btn-danger float-right" href="{{route('categorias.index')}}">Cancelar</a>
                             </div>
                         </div>
                         <hr>

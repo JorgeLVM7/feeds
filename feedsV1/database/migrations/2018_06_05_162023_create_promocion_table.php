@@ -22,10 +22,12 @@ class CreatePromocionTable extends Migration
             $table->string('hora_final');
             $table->string('path')->nullable();
             $table->integer('user_id')->unsigned();
+            $table->integer('rest_id')->unsigned();
 
             //Relation
 
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('rest_id')->references('id')->on('restaurantes');
             $table->timestamps();
         });
     }

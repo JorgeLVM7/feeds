@@ -21,15 +21,17 @@
                 </tr>
               </thead>
               <tbody>
-              @foreach($categorias as $cat)
-                      <td>{{ $cat ->categoria }}</td>
+              @foreach($categorias as $categoria)
+                      <td>{{ $categoria->categoria }}</td>
                       <td>
                         <div class="btn-group btn-group-toggle" >
-                          <a href="{{ route('categorias.edit', $cat->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
-                          <a href="" data-target="#modal-delete-{{$cat->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
+                          <a href="{{ route('categorias.edit', $categoria->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+                          
+                          <a href="" data-target="#modal-delete-{{$categoria->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
                         </div>
                       </td>
                   </tr>
+              @include('cPanel.categorias.modal')  
               @endforeach
               </tbody>
           </table>

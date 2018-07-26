@@ -50,12 +50,19 @@
         locale: 'es-es',
         uiLibrary: 'bootstrap4'
     });
-</script>
-<!--JS de horario-final de evento -->
-<script>
+
+ //JS de horario-final de evento 
     $('#time_out').timepicker({
         locale: 'es-es',
         uiLibrary: 'bootstrap4'
     });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.selectC').select2({
+            placeholder : "Restaurante al que va dirigido",
+            allowClear : true
+        });
+    }); 
 </script>
 @endsection

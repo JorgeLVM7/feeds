@@ -38,16 +38,31 @@
 </div>
 
 <div class="row">
-    <br>
+    <div class="col-md-4">
+        <div class="form-group">
+            {!! Form::label('rest_id','Restaurante: ') !!}
+            <select name="rest_id" class="form-control selectC">
+                <option></option>
+                @foreach ($restaurantes as $restaurante)
+                    <option value="{{ $restaurante->id }}">{{$restaurante->nombre}}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+
     <div class="col-md-6">
-        <div class="input-group mb-3">
-            <div class="custom-file">
-                <input type="file" name="path" class="custom-file-input" maxlength="50" id="inputGroupFile02"/>
-                <label class="custom-file-label" for="inputGroupFile02">Elige tu imagen...</label>
+    <br>
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" name="path" class="custom-file-input" maxlength="50" id="inputGroupFile02"/>
+                    <label class="custom-file-label" for="inputGroupFile02">Elige tu imagen...</label>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 {{ Form::hidden('user_id',auth()->user()->id ) }}
 
