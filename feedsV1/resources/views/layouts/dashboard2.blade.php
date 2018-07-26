@@ -72,7 +72,7 @@
             @if(Auth::user()->roles_id_rol===2)
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('config.index') }}">Administrador <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white" href="{{ route('admin.index') }}">Administrador <span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
@@ -116,6 +116,29 @@
 </div>
 
 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+{{--Datatables--}}
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script type="text/javascript" href="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/af-2.3.0/b-1.5.2/r-2.2.2/sl-1.2.6/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/af-2.3.0/b-1.5.2/r-2.2.2/sl-1.2.6/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json">
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/datatables.min.css"/>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/datatables.min.js"></script>
+
+
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -157,6 +180,59 @@
         //replace the "Choose a file" label
         $(this).next('.custom-file-label').html(fileName);
     })
+
+
+
+</script>
+
+<script>
+    {{-- Databales--}}
+
+    $(document).ready( function () {
+
+        $('#table_id').DataTable({
+            "language": {
+                "url": "dataTables.spanish.lang"
+            },
+            dom: 'Bfrtip',
+            buttons: [
+                'csv', 'excel', 'print'
+            ],
+
+            language: {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                }
+            },
+
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+
+
+        });
+
+    } );
 </script>
 
 </body>

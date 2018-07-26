@@ -40,6 +40,9 @@ Route::group(['middleware'=>'auth'],function() {
     Route::resource('config','ConfigController');
 
     Route::resource('categorias','CategoriasController');
+
+    Route::resource('admin','AdminController');
+
 });
 Auth::routes();
 

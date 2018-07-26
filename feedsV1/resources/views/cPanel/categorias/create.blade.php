@@ -10,7 +10,7 @@
                             <h1 class="c_black">Agregar categoría</h1>
                         </div>
                         <div class="col-2">
-                            <a class="btn btn-danger float-right" href="{{route('categorias.index')}}">Cancelar</a>
+                            <a class="btn btn-danger float-right" href="{{route('admin.index')}}">Cancelar</a>
                         </div>
                     </div>
                     <hr>

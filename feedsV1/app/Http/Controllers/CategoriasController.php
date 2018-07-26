@@ -23,7 +23,7 @@ class CategoriasController extends Controller
         $categorias = new Categorias;
         $categorias->categoria = $request->categoria;
         $categorias->save();
-        return redirect()-> route('categorias.index')
+        return redirect()-> route('admin.index')
         ->with('info','La categoría fue guardado correctamente');
     }
     public function create()
@@ -37,7 +37,7 @@ class CategoriasController extends Controller
         $categorias->categoria = $request->categoria;
         $categorias->save();
 
-        return redirect()-> route('cPanel.categorias.index')
+        return redirect()-> route('cPanel.admin.index')
             ->with('info','La categoría fue actualizada correctamente');
     }
     public function destroy($id)

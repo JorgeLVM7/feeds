@@ -35,7 +35,7 @@
                                         <div class="card-body">
                                             <div class="btn-group" role="group">
                                                 <a href="{{ route('restaurantes.show', $restaurante->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
-                                                <a href="{{ route('restaurantes.edit', $restaurante->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+                                                <a href="{{ route('restaurantes.edit', $restaurante->id) }}"   role="button" aria-pressed="true">Editar</a>
                                                 <a href="" data-target="#modal-delete-{{$restaurante->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
                                             </div>
                                         </div>
