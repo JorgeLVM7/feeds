@@ -75,5 +75,16 @@
                 </table>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h4>Usuarios</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{--Inserta tu codigo aqui pansho --}}
+            </div>
+        </div>
     </div>
 @stop
