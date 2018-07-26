@@ -23,8 +23,18 @@ class FrontController extends Controller
 
     }
 
-    public function show()
+    public function show($id)
     {
+        //        Restaurantes
+        $restaurantes = Restaurantes::orderBy('id','DESC')->paginate(4);
 
+//        Promociones
+        $promociones = Promocion::orderBy('id','DESC')->paginate(4);
+
+//        Eventos
+        $eventos = Restaurantes::orderBy('id','DESC')->paginate(25);
+
+
+        return view ('view',compact('restaurantes', 'promociones','eventos'));
     }
 }
