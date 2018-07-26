@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Categorias;
 use App\Http\Requests\CategoriasRequest;
+use App\Http\Requests\CategoriasEditRequest;
 use Illuminate\Http\Request;
 
 class CategoriasController extends Controller
@@ -31,14 +32,14 @@ class CategoriasController extends Controller
     {
         return view('cPanel.categorias.create');
     }
-    public function update(CategoriasRequest $request, $id)
+    public function update(CategoriasEditRequest $request, $id)
     {
         $categorias = categorias::find($id);
 
         $categorias->categoria = $request->categoria;
         $categorias->save();
 
-        return redirect()-> route('cPanel.admin.index')
+        return redirect()-> route('admin.index')
             ->with('info','La categoría fue actualizada correctamente');
     }
     public function destroy($id)

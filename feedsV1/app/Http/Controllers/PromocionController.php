@@ -69,7 +69,9 @@ class PromocionController extends Controller
     }
     public function edit($id)
     {
+        $restaurantes = Restaurantes::all()
+            ->where('user_id', auth()->user()->id);
         $promocion = Promocion::find($id);
-        return view('cPanel.promocion.edit', compact('promocion'));
+        return view('cPanel.promocion.edit', compact('promocion','restaurantes'));
     }
 }

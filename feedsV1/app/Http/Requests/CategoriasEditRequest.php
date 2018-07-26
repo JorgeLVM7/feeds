@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoriasRequest extends FormRequest
+class CategoriasEditRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,7 @@ class CategoriasRequest extends FormRequest
     public function rules()
     {
         return [
-        'categoria' => 'required|unique',
-
+            'categoria' => 'required',
         ];
     }
 
@@ -33,7 +32,6 @@ class CategoriasRequest extends FormRequest
     {
         return[
             'categoria.required' => 'El campo Nombre de categoría es obligatorio',
-            'categoria.unique' => 'Esta categoría ya existe',
         ];
     }
 }

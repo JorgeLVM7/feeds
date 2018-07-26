@@ -22,8 +22,8 @@
                 <table id="table_id" class="display table table-hover table-bordered table-stripped">
                     <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Correo</th>
+                        <th>No.</th>
+                        <th>Categoría</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
@@ -41,7 +41,7 @@
                                 </a>
                             </td>
                         </tr>
-
+                    @include('cPanel.categorias.modal')  
                     @endforeach
                     </tbody>
                 </table>
@@ -68,7 +68,7 @@
             <table class="table table-hover ">
                 <thead>
                     <tr>
-                        <th>Foto<th>
+                        <th>Foto</th>
                         <th>Nombre</th>
                         <th>Correo electrónico</th>
                         <th>Role</th>
@@ -77,17 +77,18 @@
                 </thead>
                 <tbody>
                     @foreach($usuarios as $usuario)
-                    <td><img src="" alt=""></td>
-                    <td>{{ $usuario->name }}</td>
-                    <td>{{ $usuario->email }}</td>
-                    <td>{{ $usuario->roles_id_role}}</td>
-                    <td>
-                        <div class="btn-group btn-group-toggle" >
-                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+                    <tr>
+                        <td><img src="/images/{{$usuario->path}}" alt="" height="40px" widht="40px"></td>
+                        <td>{{ $usuario->name }}</td>
+                        <td>{{ $usuario->email }}</td>
+                        <td>{{ $usuario->role}}</td>
+                        <td>
+                            <div class="btn-group btn-group-toggle" >
+                                <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
                           
-                            <a href="" data-target="#modal-delete-{{$usuario->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
-                        </div>
-                    </td>
+                                <a href="" data-target="#modal-delete-{{$usuario->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
+                            </div>
+                        </td>
                     </tr>
                     @include('cPanel.usuarios.modal')  
                     @endforeach
