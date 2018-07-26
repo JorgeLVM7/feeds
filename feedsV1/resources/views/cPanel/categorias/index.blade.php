@@ -21,7 +21,7 @@
                 </tr>
               </thead>
               <tbody>
-              @foreach($categorias as $categoria)
+                @foreach($categorias as $categoria)
                       <td>{{ $categoria->categoria }}</td>
                       <td>
                         <div class="btn-group btn-group-toggle" >
@@ -31,8 +31,8 @@
                         </div>
                       </td>
                   </tr>
-              @include('cPanel.categorias.modal')  
-              @endforeach
+                 @include('cPanel.categorias.modal')  
+                @endforeach
               </tbody>
           </table>
           {!! $categorias->render() !!}

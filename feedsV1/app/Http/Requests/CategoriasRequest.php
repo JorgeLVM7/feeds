@@ -24,7 +24,7 @@ class CategoriasRequest extends FormRequest
     public function rules()
     {
         return [
-        'categoria' => 'required|alpha',
+        'categoria' => 'required|alpha|unique',
 
         ];
     }
@@ -34,6 +34,7 @@ class CategoriasRequest extends FormRequest
         return[
             'categoria.required' => 'El campo Nombre de categoría es obligatorio',
             'categoria.alpha' => 'El campo Nombre de categoría solo acepta letras',
+            'categoria.unique' => 'Esta categoría ya existe',
         ];
     }
 }
