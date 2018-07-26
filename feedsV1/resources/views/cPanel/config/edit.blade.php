@@ -16,13 +16,13 @@
 
      <div class="row">
          <div class="col-12 c_black">
-             <div class="row">
+             {{--<div class="row">--}}
              {!! Form::model($configuracion, ['route'=>['config.update',$configuracion->id], 'method'=> 'PUT','files'=>true]) !!}
 
              @include('cPanel.config.fragment.form')
 
              {!! Form::close() !!}
-             </div>
+             {{--</div>--}}
          </div>
      </div>
  </div>
