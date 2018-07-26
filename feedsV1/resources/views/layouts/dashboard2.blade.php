@@ -127,13 +127,13 @@
 
 @yield('script')
 
-<script>
-    $(document).ready(function() {
-        // show the alert
-        setTimeout(function() { $(".alert").alert('close'); }, 2000);
+{{--<script>--}}
+    {{--$(document).ready(function() {--}}
+        {{--// show the alert--}}
+        {{--setTimeout(function() { $(".alert").alert('close'); }, 2000);--}}
 
-    });
-</script>
+    {{--});--}}
+{{--</script>--}}
 
 </body>
 </html>
