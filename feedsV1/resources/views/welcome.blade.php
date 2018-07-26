@@ -58,8 +58,9 @@
     <div class="row">
         <div class="col-12">
             <div class="row d-flex justify-content-around">
-                <div class="card-deck col-12">
-                    @foreach($restaurantes as $restaurante)
+                {{--<div class="card-group">--}}
+                    <div class="card-deck col-12">
+                        @foreach($restaurantes as $restaurante)
                             <div class="col-sm-3 caja">
                                 <a href="" style="text-decoration: none; color: #1C1C1C">
                                     <div class="card" style="width: 100%;">
@@ -71,8 +72,9 @@
                                     </div>
                                 </a>
                             </div>
-                    @endforeach
+                        @endforeach
 
+                    {{--</div>--}}
                 </div>
             </div>
             {!! $restaurantes->render() !!}
@@ -108,6 +110,41 @@
                 </div>
             </div>
             {!! $promociones->render() !!}
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Eventos</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row d-flex justify-content-around">
+                <div class="card-deck col-12">
+                    @foreach($eventos as $evento)
+                        <div class="col-sm-3 caja">
+                            <a href="" style="text-decoration: none; color: #1C1C1C">
+                                <div class="card" style="width: 100%;">
+                                    <img class="card-img-top" src="/images/{{$evento->path}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $evento ->nombre }}</h5>
+                                        <p class="card-text">{{ $evento ->descripcion }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+            {!! $promociones->render() !!}
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <br>
 
         </div>
     </div>
