@@ -53,12 +53,14 @@ class UsuariosController extends Controller
     public function destroy($id)
     {
         $usuarios = User::find($id);
-        $usuario ->delete();
+        $usuarios ->delete();
         return back()->with('info','El usuario fue eliminado correctamente');
     }
     public function edit($id)
     {
+
+        $roles = Roles::all();
         $usuarios = User::find($id);
-        return view('cPanel.usuarios.edit', compact('usuarios'));
+        return view('cPanel.usuarios.edit', compact('usuarios','roles'));
     }
 }

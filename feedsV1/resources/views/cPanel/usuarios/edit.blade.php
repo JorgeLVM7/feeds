@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-md-12 c_black">
                                 {{--<div class="row">--}}
-                                    {!! Form::model($usuario, ['route'=>['usuarios.update',$usuario->id], 'method'=> 'PUT','files'=>true]) !!}
+                                    {!! Form::model($usuarios, ['route'=>['usuarios.update',$usuarios->id], 'method'=> 'PUT','files'=>true]) !!}
 
                                         @include('cPanel.usuarios.fragment.form')
 
