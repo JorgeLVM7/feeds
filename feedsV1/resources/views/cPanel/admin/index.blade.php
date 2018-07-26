@@ -79,11 +79,11 @@
                     @foreach($usuarios as $usuario)
                     <td><img src="" alt=""></td>
                     <td>{{ $usuario->name }}</td>
-                    <td>{{ $usuario->email}}</td>
+                    <td>{{ $usuario->email }}</td>
                     <td>{{ $usuario->roles_id_role}}</td>
                     <td>
                         <div class="btn-group btn-group-toggle" >
-                            <a href="{{ route('cPanel.usuarios.edit', $usuario->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
+                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
                           
                             <a href="" data-target="#modal-delete-{{$usuario->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
                         </div>

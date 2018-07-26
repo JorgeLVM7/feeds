@@ -11,7 +11,7 @@
                                  <hr>
                             </div>
                             <div class="col-2">
-                                 <a class="btn btn-danger float-right" href="{{route('usuarios.index')}}">Cancelar</a>
+                                 <a class="btn btn-danger float-right" href="{{route('admin.index')}}">Cancelar</a>
                             </div>
                         </div>
                         <hr>
