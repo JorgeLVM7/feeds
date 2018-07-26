@@ -7,6 +7,10 @@ use Carbon\Carbon;
 
 class Restaurantes extends Model
 {
+    protected $table='restaurantes';
+
+    protected $primaryKey='id';
+
     protected $fillable = [
         'nombre', 'descripcion', 'sitio_web', 'idcategoria1', 'email', 'calle', 'no_int', 'no_ext', 'colonia', 'codigo_postal', 'referencia', 'telefono', 'RFC','horario','latitud','longitud','user_id','path'
     ];
