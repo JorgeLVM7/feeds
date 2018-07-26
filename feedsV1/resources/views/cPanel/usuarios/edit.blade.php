@@ -8,7 +8,7 @@
                     <div class="row">
                             <div class="col-10">
                                  <h1 class="c_black">Editar usuario </h1>
-                                 <hr>
+                                 {{--<hr>--}}
                             </div>
                             <div class="col-2">
                                  <a class="btn btn-danger float-right" href="{{route('admin.index')}}">Cancelar</a>

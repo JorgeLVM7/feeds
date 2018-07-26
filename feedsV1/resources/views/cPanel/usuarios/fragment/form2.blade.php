@@ -15,8 +15,8 @@
 
     <div class="col-md-4">
         <div class="form-group">
-            {!! Form::label('roles_id_role','Role: ') !!}
-            {!! Form::select('roles_id_role',$select, null,['class'=>'form-control']
+            {!! Form::label('roles_id_rol','Role: ') !!}
+            {!! Form::select('roles_id_rol',$select, null,['class'=>'form-control']
         ) !!}
         </div>
     </div>

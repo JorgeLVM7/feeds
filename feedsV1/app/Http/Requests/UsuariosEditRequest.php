@@ -27,7 +27,7 @@ class UsuariosEditRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email|max:255',
             'path' =>'required',
-            'roles_id_role' =>'required'
+            'roles_id_rol' =>'required'
         ];
     }
     public function messages()
