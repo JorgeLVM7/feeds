@@ -75,6 +75,10 @@
                     <a class="nav-link text-white" href="{{ route('config.index') }}">Administrador <span class="sr-only">(current)</span></a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('categorias.index') }}">Categorias <span class="sr-only">(current)</span></a>
+                </li>
+
 
             @else
 
@@ -144,7 +148,7 @@
 <script>
     $(document).ready(function() {
         // show the alert
-        setTimeout(function() { $(".alert").alert('close'); }, 2000);
+        setTimeout(function() { $(".alert").alert('close'); }, 15000);
 
     });
 </script>

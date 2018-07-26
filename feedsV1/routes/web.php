@@ -38,6 +38,8 @@ Route::group(['middleware'=>'auth'],function() {
     Route::resource('evento','EventoController');
 
     Route::resource('config','ConfigController');
+
+    Route::resource('categorias','CategoriasController');
 });
 Auth::routes();
 
