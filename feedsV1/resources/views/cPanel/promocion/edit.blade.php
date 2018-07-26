@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-10">
-                                 <h1 class="c_black">Editar promocion </h1>
+                                 <h1 class="c_black">Editar promoción </h1>
                             </div>
                             <div class="col-2">
                                  <a class="btn btn-danger float-right" href="{{route('promocion.index')}}">Cancelar</a>
@@ -57,7 +57,7 @@
 <script>
     $(document).ready(function() {
         $('.selectC').select2({
-            placeholder : "Restaurante al que va dirigida",
+            placeholder : "Restaurante al que va dirigido",
             allowClear : true
         });
     }); 

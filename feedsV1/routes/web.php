@@ -19,7 +19,7 @@
 Route::get('/','FrontController@index')->name('index');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/restaurantes', 'HomeController@index')->name('restaurantes');
 
 Route::get('/respuesta', function () {
     return view('response');

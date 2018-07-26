@@ -50,18 +50,14 @@
 </nav>
 <div class="container" style="margin-top: 81.17px">
     <div class="row">
+        <br>
         <div class="col-12 text-center">
             <h1><b>¡ A un paso del sabor !</b></h1>
         </div>
     </div>
     <br>
     <div class="row">
-        <select name="categorias" id="categorias" class="form-control selectQ" style="width:50%">
-            <option value=""></option>
-            @foreach ($categorias as $key => $value)
-                <option value="{{ $value->id }}">{{ $value->categoria }}</option>
-            @endforeach
-        </select>
+        <h3>Restaurantes en Feed's</h3>
     </div>
     <br>
     <div class="row">
