@@ -6,7 +6,7 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-10">
-                    <h1 class="c_black">Evento</h1>
+                    <h1 class="c_black">Eventos</h1>
                     <hr>
                 </div>
                 <div class="col-2">
