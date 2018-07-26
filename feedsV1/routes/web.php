@@ -45,8 +45,12 @@ Route::group(['middleware'=>'auth'],function() {
 
     Route::resource('usuarios', 'UsuariosController');
 
+
 });
 Auth::routes();
+
+Route::resource('home','FrontController');
+
 
 
 

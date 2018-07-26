@@ -62,7 +62,7 @@
                     <div class="card-deck col-12">
                         @foreach($restaurantes as $restaurante)
                             <div class="col-sm-3 caja">
-                                <a href="" style="text-decoration: none; color: #1C1C1C">
+{{--                                <a href="{{ route('home.show',$restaurante->id) }}" style="text-decoration: none; color: #1C1C1C">--}}
                                     <div class="card" style="width: 100%;">
                                         <img class="card-img-top" src="/images/{{$restaurante->path}}" alt="Card image cap">
                                         <div class="card-body">
@@ -70,7 +70,7 @@
                                             <p class="card-text">{{ $restaurante ->descripcion }}</p>
                                         </div>
                                     </div>
-                                </a>
+                                {{--</a>--}}
                             </div>
                         @endforeach
 

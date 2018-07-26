@@ -26,15 +26,15 @@ class FrontController extends Controller
     public function show($id)
     {
         //        Restaurantes
-        $restaurantes = Restaurantes::orderBy('id','DESC')->paginate(4);
+        $restaurante = Restaurantes::find($id);
 
 //        Promociones
-        $promociones = Promocion::orderBy('id','DESC')->paginate(4);
+        $promociones = Promocion::find($id);
 
 //        Eventos
-        $eventos = Restaurantes::orderBy('id','DESC')->paginate(25);
+        $eventos = Evento::find($id);
 
 
-        return view ('view',compact('restaurantes', 'promociones','eventos'));
+        return view ('home.show',compact('restaurante', 'promociones','eventos'));
     }
 }
