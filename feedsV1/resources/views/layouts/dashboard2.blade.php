@@ -68,6 +68,20 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{ route('config.index') }}">Configuración <span class="sr-only">(current)</span></a>
             </li>
+
+            @if(Auth::user()->roles_id_rol===2)
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('config.index') }}">Administrador <span class="sr-only">(current)</span></a>
+                </li>
+
+
+            @else
+
+
+            @endif
+
+
         </ul>
 
 
@@ -90,7 +104,7 @@
 
     </div>
 </nav>
-
+{{ Auth::user()->roles_id_rol }}
 
 {{--contenido de los modulos --}}
 <div class="container-fluid">
@@ -127,13 +141,13 @@
 
 @yield('script')
 
-{{--<script>--}}
-    {{--$(document).ready(function() {--}}
-        {{--// show the alert--}}
-        {{--setTimeout(function() { $(".alert").alert('close'); }, 2000);--}}
+<script>
+    $(document).ready(function() {
+        // show the alert
+        setTimeout(function() { $(".alert").alert('close'); }, 2000);
 
-    {{--});--}}
-{{--</script>--}}
+    });
+</script>
 
 </body>
 </html>
