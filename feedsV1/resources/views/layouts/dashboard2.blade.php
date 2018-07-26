@@ -93,18 +93,31 @@
         </ul>
 
 
-        <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ Auth::user()->name }}
-            </a>
+        {{--<div class="dropdown">--}}
+            {{--<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                {{--{{ Auth::user()->name }}--}}
+            {{--</a>--}}
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+            {{--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+                {{--<button class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">Cerrar Sesión</button>--}}
+                {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+                    {{--{{ csrf_field() }}--}}
+                {{--</form>--}}
+
+            {{--</div>--}}
+        {{--</div>--}}
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{ Auth::user()->name }}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Cerrar Sesión</button>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
-
             </div>
         </div>
 
@@ -122,25 +135,6 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-
-{{--Datatables--}}
-
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<script type="text/javascript" href="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/af-2.3.0/b-1.5.2/r-2.2.2/sl-1.2.6/datatables.min.css"/>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/af-2.3.0/b-1.5.2/r-2.2.2/sl-1.2.6/datatables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json">
-
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/datatables.min.css"/>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/datatables.min.js"></script>
-
-
 
 
 <!-- Optional JavaScript -->
@@ -189,7 +183,14 @@
 
 </script>
 
+{{-- ///////////////////////////////////////////////////////////////////////////////////////////////// --}}
+
+
+
+
+
 <script>
+
     {{-- Databales--}}
 
     $(document).ready( function () {
@@ -230,14 +231,35 @@
 
             dom: 'Bfrtip',
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+                 'excel', 'pdf', 'print'
             ]
 
 
         });
 
     } );
+
+
+
+
+
+
 </script>
+
+{{--Datatables--}}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/af-2.3.0/b-1.5.2/r-2.2.2/sl-1.2.6/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/af-2.3.0/b-1.5.2/r-2.2.2/sl-1.2.6/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json">
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/datatables.min.css"/>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/datatables.min.js"></script>
+
+
 
 </body>
 </html>
