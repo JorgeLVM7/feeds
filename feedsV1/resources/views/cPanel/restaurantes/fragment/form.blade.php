@@ -134,13 +134,13 @@
     </div>
     <div class="col-md-3">
         <div class="form-group">
-            {!! Form::label('hora1','hora de apertura:') !!}
+            {!! Form::label('hora1','Hora de apertura:') !!}
             {!! Form::text('hora1', null,['id'=>'timepicker1', 'width'=>"260"]) !!}
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group">
-            {!! Form::label('hora2','hora de clausura:') !!}
+            {!! Form::label('hora2','Hora de cierre:') !!}
             {!! Form::text('hora2', null,['id'=>'timepicker2', 'width'=>"260"]) !!}
         </div>
     </div>
