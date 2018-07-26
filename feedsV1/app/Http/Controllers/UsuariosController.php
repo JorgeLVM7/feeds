@@ -36,7 +36,7 @@ class UsuariosController extends Controller
         ->with('info','El usuario fue guardado correctamente');
     }
 
-    public function update(CategoriasRequest $request, $id)
+    public function update(UsuariosRequest $request, $id)
     {
         $usuarios = User::find($id);
 
@@ -59,7 +59,16 @@ class UsuariosController extends Controller
     {
 
         $roles = Roles::all();
+        foreach($roles as $role) {
+            $select[$role->id] = $role->roles;
+        }
+
+
         $usuarios = User::find($id);
-        return view('cPanel.usuarios.edit', compact('usuarios','roles'));
+
+//        foreach($usuarios as $usuario) {
+//            $select[$usuario->roles_id_rol] = $roles->roles;
+//        }
+        return view('cPanel.usuarios.edit', compact('usuarios','select'));
     }
 }

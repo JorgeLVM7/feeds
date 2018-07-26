@@ -75,13 +75,13 @@
                     <a class="nav-link text-white" href="{{ route('admin.index') }}">Administrador <span class="sr-only">(current)</span></a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('categorias.index') }}">Categorias <span class="sr-only">(current)</span></a>
-                </li>
+                {{--<li class="nav-item">--}}
+                    {{--<a class="nav-link text-white" href="{{ route('categorias.index') }}">Categorias <span class="sr-only">(current)</span></a>--}}
+                {{--</li>--}}
 
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('usuarios.index') }}">Usuarios<span class="sr-only">(current)</span></a>
-                </li>
+                {{--<li class="nav-item">--}}
+                    {{--<a class="nav-link text-white" href="{{ route('usuarios.index') }}">Usuarios<span class="sr-only">(current)</span></a>--}}
+                {{--</li>--}}
 
 
             @else
