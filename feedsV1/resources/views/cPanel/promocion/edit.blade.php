@@ -54,4 +54,12 @@
         uiLibrary: 'bootstrap4'
     });
 </script>
+<script>
+    $(document).ready(function() {
+        $('.selectC').select2({
+            placeholder : "Restaurante al que va dirigida",
+            allowClear : true
+        });
+    }); 
+</script>
 @endsection

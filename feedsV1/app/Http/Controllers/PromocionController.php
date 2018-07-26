@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Promocion;
+use App\Restaurantes;
 use Illuminate\Http\Request;
 use App\Http\Requests\PromocionRequest;
 use Auth;
@@ -33,13 +34,16 @@ class PromocionController extends Controller
         $promocion->hora_final = $request->hora_final;
         $promocion->path = $request->path;
         $promocion->user_id = $request->user_id;
+        $promocion->rest_id = $request->rest_id;
         $promocion->save();
         return redirect()-> route('promocion.index')
         ->with('info','La promocion fue guardado correctamente');
     }
     public function create()
     {
-        return view('cPanel.promocion.create');
+        $restaurantes = Restaurantes::all()
+            ->where('user_id', auth()->user()->id);
+        return view('cPanel.promocion.create',compact('restaurantes'));
     }
     public function update(PromocionRequest $request, $id)
     {
@@ -52,6 +56,7 @@ class PromocionController extends Controller
         $promocion->hora_final = $request->hora_final;
         $promocion->path = $request->path;
         $promocion->user_id = $request->user_id;
+        $promocion->rest_id = $request->rest_id;
         $promocion->save();
         return redirect()-> route('promocion.index')
         ->with('info','La promocion fue actualizada correctamente');

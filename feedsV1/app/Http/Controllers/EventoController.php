@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Evento;
+use App\Restaurantes;
 use Illuminate\Http\Request;
 use App\Http\Requests\EventoRequest;
 use Auth;
@@ -32,13 +33,16 @@ class EventoController extends Controller
         $evento->hora_final = $request->hora_final;
         $evento->path = $request->path;
         $evento->user_id = $request->user_id;
+        $promocion->rest_id = $request->rest_id;
         $evento->save();
         return redirect()-> route('evento.index')
         ->with('info','El evento fue guardado correctamente');
     }
     public function create()
     {
-        return view('cPanel.evento.create');
+        $restaurantes = Restaurantes::all()
+            ->where('user_id', auth()->user()->id);
+        return view('cPanel.evento.create',compact('restaurantes'));
     }
     public function update(EventoRequest $request, $id)
     {
@@ -51,6 +55,7 @@ class EventoController extends Controller
         $evento->hora_final = $request->hora_final;
         $evento->path = $request->path;
         $evento->user_id = $request->user_id;
+        $promocion->rest_id = $request->rest_id;
         $evento->save();
 
         return redirect()-> route('cPanel.evento.index')

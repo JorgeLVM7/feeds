@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categorias;
+use App\Http\Requests\CategoriasRequest;
 use Illuminate\Http\Request;
 
 class CategoriasController extends Controller
@@ -49,6 +50,6 @@ class CategoriasController extends Controller
     public function edit($id)
     {
         $categorias = Categorias::find($id);
-        return view('cPanel.categorias.edit', compact('evento'));
+        return view('cPanel.categorias.edit', compact('categorias'));
     }
 }
