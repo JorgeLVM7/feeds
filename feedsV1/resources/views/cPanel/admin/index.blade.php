@@ -36,7 +36,7 @@
                             <td>{{ $categoria ->categoria }}</td>
                             <td>
                                 <a href="{{ route('categorias.edit', $categoria->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
-                                <a href="" data-target="#modal-delete-{{$categoria->id}}"  data-toggle="modal">
+                                <a href="" data-target="#modalCat-delete-{{$categoria->id}}"  data-toggle="modal">
                                     <button class="btn btn-outline-danger"  style="cursor: pointer;" type="submit">Borrar</button>
                                 </a>
                             </td>
@@ -82,11 +82,11 @@
                                         <div class="btn-group btn-group-toggle" >
                                             <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
 
-                                            <a href="" data-target="#modal-delete-{{$usuario->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
+                                            <a href="" data-target="#modalUs-delete-{{$usuario->id}}" data-toggle="modal"><button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button></a>
                                         </div>
                                     </td>
                                 </tr>
-                                @include('cPanel.usuarios.modal')
+                            @include('cPanel.usuarios.modal')
                             @endforeach
                             </tbody>
                         </table>
@@ -131,12 +131,12 @@
                             <td>{{$restaurante->usuario}}</td>
                             <td>
                                 <a href="{{ route('restaurantes.edit', $restaurante->id) }}" class="btn btn-outline-warning"  role="button" aria-pressed="true">Editar</a>
-                                <a href="" data-target="#modal-delete-{{$restaurante->id}}"  data-toggle="modal">
+                                <a href="" data-target="#modalRes-delete-{{$restaurante->id}}"  data-toggle="modal">
                                     <button class="btn btn-outline-danger"  style="cursor: pointer;" type="submit">Borrar</button>
                                 </a>
                             </td>
                         </tr>
-                        @include('cPanel.restaurantes.modal')
+                    @include('cPanel.restaurantes.modal')
                     @endforeach
                     </tbody>
                 </table>

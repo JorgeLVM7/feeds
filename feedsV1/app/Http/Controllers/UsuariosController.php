@@ -24,7 +24,7 @@ class UsuariosController extends Controller
         return view('cPanel.usuarios.create',compact('roles'));
     }
 
-    public function store(CategoriasRequest $request)
+    public function store(UsuariosRequest $request)
     {
         $usuarios = new User;
         $usuarios->name = $request->name;

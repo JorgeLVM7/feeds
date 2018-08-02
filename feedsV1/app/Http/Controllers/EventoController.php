@@ -33,7 +33,7 @@ class EventoController extends Controller
         $evento->hora_final = $request->hora_final;
         $evento->path = $request->path;
         $evento->user_id = $request->user_id;
-        $promocion->rest_id = $request->rest_id;
+        $evento->rest_id = $request->rest_id;
         $evento->save();
         return redirect()-> route('evento.index')
         ->with('info','El evento fue guardado correctamente');
@@ -55,7 +55,7 @@ class EventoController extends Controller
         $evento->hora_final = $request->hora_final;
         $evento->path = $request->path;
         $evento->user_id = $request->user_id;
-        $promocion->rest_id = $request->rest_id;
+        $evento->rest_id = $request->rest_id;
         $evento->save();
 
         return redirect()-> route('cPanel.evento.index')
@@ -69,7 +69,9 @@ class EventoController extends Controller
     }
     public function edit($id)
     {
+        $restaurantes = Restaurantes::all()
+            ->where('user_id', auth()->user()->id);
         $evento = Evento::find($id);
-        return view('cPanel.evento.edit', compact('evento'));
+        return view('cPanel.evento.edit', compact('evento','restaurantes'));
     }
 }

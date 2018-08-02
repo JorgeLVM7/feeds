@@ -1,4 +1,4 @@
-<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$ev->id}}">
+<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modalEv-delete-{{$ev->id}}">
     {!! Form::Open(array('action'=>array('EventoController@destroy',$ev->id),'method'=>'delete'))!!}
     <div class="modal-dialog">
         <div class="modal-content">

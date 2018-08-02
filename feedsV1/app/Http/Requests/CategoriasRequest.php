@@ -24,7 +24,7 @@ class CategoriasRequest extends FormRequest
     public function rules()
     {
         return [
-        'categoria' => 'required|unique',
+        'categoria' => 'required|unique:categorias',
 
         ];
     }

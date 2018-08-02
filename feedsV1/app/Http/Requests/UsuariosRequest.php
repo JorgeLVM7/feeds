@@ -27,8 +27,8 @@ class UsuariosRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password'=>'required|min:8|confirmed',
-            'path' =>'required',
-            'roles_id_role' =>'required'
+            'path' =>'required|image|max:5120*5120*5',
+            'roles_id_role' =>'required',
         ];
 
 
@@ -39,11 +39,13 @@ class UsuariosRequest extends FormRequest
         return[
             'name.required' => 'El campo Nombre es obligatorio',
             'email.required' => 'El campo Correo electrónico es obligatorio',
-            'email.unique' => 'Este correo ya existe',
-            'password' => 'El campo Contraseña es obligatorio',
+            'email.unique' => 'Este correo electrónico ya existe',
+            'password.required' => 'El campo Contraseña es obligatorio',
             'password.confirmed' => 'Confirme su contraseña',
             'path.required' => 'El campo Foto es obligatorio',
-            'roles_id_role' => 'Asigne un rol al usuario',
+            'path.image'   =>'Solo acepta imagenes de tipo jpg, png y gif',
+            'path.max'  =>'El máximo permitido es de 5 MB',
+            'roles_id_role.required' => 'Asigne un rol al usuario',
         ];
     }
 }

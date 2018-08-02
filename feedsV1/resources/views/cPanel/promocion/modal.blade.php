@@ -1,4 +1,4 @@
-<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$promo->id}}">
+<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modalPro-delete-{{$promo->id}}">
     {!! Form::Open(array('action'=>array('PromocionController@destroy',$promo->id),'method'=>'delete'))!!}
     <div class="modal-dialog">
         <div class="modal-content">

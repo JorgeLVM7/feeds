@@ -40,8 +40,8 @@
     <!-- Bootstrap theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/bootstrap.rtl.min.css"/>
 
-    <link rel="apple-touch-icon" sizes="88x88" href="img/apple-icon.png"/>
-    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="88x88" href="{{asset('img/apple-icon.png')}}"/>
+    <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
 
 
     <title>Feeds | cPanel</title>

@@ -37,7 +37,7 @@ class PromocionController extends Controller
         $promocion->rest_id = $request->rest_id;
         $promocion->save();
         return redirect()-> route('promocion.index')
-        ->with('info','La promocion fue guardado correctamente');
+        ->with('info','La promoción fue guardado correctamente');
     }
     public function create()
     {
@@ -59,7 +59,7 @@ class PromocionController extends Controller
         $promocion->rest_id = $request->rest_id;
         $promocion->save();
         return redirect()-> route('promocion.index')
-        ->with('info','La promocion fue actualizada correctamente');
+        ->with('info','La promoción fue actualizada correctamente');
     }
     public function destroy(Request $request)
     {

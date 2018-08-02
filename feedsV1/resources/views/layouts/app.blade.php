@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css')}}" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="88x88" href="{{ asset('img/apple-icon.png')}}"/>
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png')}}"/>
+    <link rel="apple-touch-icon" sizes="88x88" href="{{asset('img/apple-icon.png')}}"/>
+    <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
 </head>
 <body>
     <div id="app">
@@ -33,7 +33,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img class="logo" src="img/favicon.png" alt="">
+                        <img class="logo" src="{{asset('img/favicon.png')}}" alt="">
                     </a>
                 </div>
 

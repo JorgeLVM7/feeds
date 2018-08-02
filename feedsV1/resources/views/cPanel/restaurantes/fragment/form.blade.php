@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('nombre','Nombre de restaurante: ') !!}
+            {!! Form::label('nombre','Nombre de restaurante:') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('nombre', null,['class'=>'form-control','maxlength'=>'65']) !!}
         </div>
     </div>
@@ -18,13 +19,14 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('sitio_web','Sitio web: ') !!}
-            {!! Form::text('sitio_web', null,['class'=>'form-control']) !!}
+            {!! Form::text('sitio_web', null,['class'=>'form-control', 'placeholder'=>'https://www.example.com']) !!}
         </div>
 
     </div>
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('idcategoria1','Categoría 1:  ') !!}
+            <span class="required" aria-required="true">*</span>
             <select name="idcategoria1" class="form-control selectC">
                 <option></option>
                 @foreach ($categorias as $categoria)
@@ -69,6 +71,7 @@
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('calle','Calle: ') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('calle', null,['class'=>'form-control']) !!}
         </div>
     </div>
@@ -89,12 +92,14 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('colonia','Colonia: ') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('colonia', null,['class'=>'form-control']) !!}
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('codigo_postal','Código Postal: ') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('codigo_postal', null,['class'=>'form-control']) !!}
         </div>
     </div>
@@ -107,6 +112,7 @@
     <div class="col-md-2">
         <div class="form-group">
             {!! Form::label('telofono','Teléfono: ') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('telefono', null,['class'=>'form-control']) !!}
         </div>
     </div>
@@ -121,6 +127,7 @@
 
         <div class="form-group">
             <label for="horario">Horario</label>
+            <span class="required" aria-required="true">*</span>
             <select class="form-control select2" name="horario[]" id="horario" multiple="multiple" style="width: 100%">
                 <option value="L">Lunes</option>
                 <option value="Ma">Martes</option>
@@ -135,12 +142,14 @@
     <div class="col-md-3">
         <div class="form-group">
             {!! Form::label('hora1','Hora de apertura:') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('hora1', null,['id'=>'timepicker1', 'width'=>"260"]) !!}
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group">
             {!! Form::label('hora2','Hora de cierre:') !!}
+            <span class="required" aria-required="true">*</span>
             {!! Form::text('hora2', null,['id'=>'timepicker2', 'width'=>"260"]) !!}
         </div>
     </div>

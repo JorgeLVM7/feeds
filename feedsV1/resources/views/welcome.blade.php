@@ -95,7 +95,7 @@
                 <div class="card-deck col-12">
                     @foreach($promociones as $promocion)
                         <div class="col-sm-3 caja">
-                            <a href="" style="text-decoration: none; color: #1C1C1C">
+                           <!-- <a href="" style="text-decoration: none; color: #1C1C1C">-->
                                 <div class="card" style="width: 100%;">
                                     <img class="card-img-top" src="/images/{{$promocion->path}}" alt="Card image cap">
                                     <div class="card-body">
@@ -103,7 +103,7 @@
                                         <p class="card-text">{{ $promocion ->descripcion }}</p>
                                     </div>
                                 </div>
-                            </a>
+                            <!--</a>-->
                         </div>
                     @endforeach
 
@@ -124,7 +124,7 @@
                 <div class="card-deck col-12">
                     @foreach($eventos as $evento)
                         <div class="col-sm-3 caja">
-                            <a href="" style="text-decoration: none; color: #1C1C1C">
+                           <!-- <a href="" style="text-decoration: none; color: #1C1C1C">-->
                                 <div class="card" style="width: 100%;">
                                     <img class="card-img-top" src="/images/{{$evento->path}}" alt="Card image cap">
                                     <div class="card-body">
@@ -132,7 +132,7 @@
                                         <p class="card-text">{{ $evento ->descripcion }}</p>
                                     </div>
                                 </div>
-                            </a>
+                            <!--</a>-->
                         </div>
                     @endforeach
 
